@@ -4,7 +4,6 @@ import './Content.scss';
 function Content() {
     return (
         <section className="Content">
-            a
         </section>
     );
 }

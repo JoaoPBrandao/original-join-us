@@ -46,9 +46,7 @@
       padding: 0;
       li{
         display: inline;
-        a{
-          padding: 10px;
-        }
+        padding: 10px;
       }
     }
   }
@@ -59,6 +57,9 @@
     .busca{
       display: flex;
       align-items: center;
+      &:hover{
+        cursor: text;
+      }
       img{
         width: 9px;
         height: 9px;
@@ -68,10 +69,9 @@
       input{
         border: none;
         border-bottom: .5px solid $cinza2;
-        width: 25px;
+        width: 22px;
         display: inline-block;
         font-size: 7px;
-        text-align: right;
         &:focus{
           outline: none;
         }
