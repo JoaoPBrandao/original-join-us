@@ -1,5 +1,43 @@
 @import "cores";
 
-.Content{
-  height: 100%;
+.Outros{
+  margin-top: 104px;
+  .titulo{
+    color: $c-laranja;
+    font-size: $f-26;
+    text-align: center;
+    line-height: 38px;
+  }
+  .carrossel{
+    text-align: center;
+    .cards{
+      display: flex;
+      justify-content: center;
+      .Card{
+        margin-right: 13px;
+      }
+    }
+    .controle{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 19px;
+      .paginas{
+        color: $c-ciano;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      .botao{
+        border: 2px solid $c-ciano;
+        border-radius: 100%;
+        padding: 11px 14px 10px 12px;
+        path{
+          fill: $c-ciano
+        }
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }

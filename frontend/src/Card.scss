@@ -1,0 +1,20 @@
+@import "cores";
+
+.Card{
+  .valor{
+    float: left;
+    font-size: $f-16;
+    line-height: 23px;
+    color: $c-cinza7;
+  }
+  .cores{
+    float: right;
+    .cor{
+      width: 13px;
+      height: 13px;
+      border-radius: 13px;
+      display: inline-block;
+      margin-left: 6.5px;
+    }
+  }
+}

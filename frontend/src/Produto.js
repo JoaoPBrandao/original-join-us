@@ -22,7 +22,6 @@ class Produto extends React.Component{
 
     render(){
         return (
-            <div className="container">
                 <div className="Produto">
                     <div className="fotosVideo">
                         <div className="video">
@@ -87,7 +86,6 @@ class Produto extends React.Component{
                         </p>
                     </div>
                 </div>
-            </div>
         );
     }
 }
