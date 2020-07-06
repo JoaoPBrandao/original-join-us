@@ -1,0 +1,172 @@
+@import "cores";
+
+.Produto{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+  padding-right: 60px;
+  .fotosVideo{
+    img{
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .video{
+      p{
+        text-align: center;
+        font-size: $f-12;
+        color: $c-laranja;
+        line-height: 16px;
+      }
+      .videoButtonContainer{
+        position: relative;
+        .play{
+          position: absolute;
+          left: 23.5px;
+          top: 6.42px;
+        }
+      }
+    }
+    .carrossel{
+      margin-top: 10px;
+      img{
+        display: block;
+        margin: auto;
+      }
+      .controleCarrossel{
+      }
+      .imagens{
+        margin: 21px 0;
+        .imagemCarrossel{
+          margin-bottom: 9px;
+          opacity: .5;
+        }
+        .ativo{
+          opacity: 1;
+        }
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .imagem{
+  }
+  .descricao{
+    width: 444px;
+    border: 2px solid #D2E1DF;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-size: $f-14;
+    height: fit-content;
+    .selecaoAtual{
+      color: $c-azulCinza;
+      margin-left: 10px;
+    }
+    .nome{
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: $f-26;
+    }
+    .codigo{
+      color: $c-cinza7;
+    }
+    .preco{
+      margin-top: 24px;
+      .precoDesconto{
+        font-size: $f-14;
+        color: $c-vermelho;
+        text-decoration: line-through;
+        &:after{
+          content: "";
+          border-right: 1px solid $c-vermelho;
+          padding-left: 3px;
+        }
+      }
+      .precoAtual{
+        font-size: $f-20;
+        color: $c-cinza6;
+        font-weight: bold;
+        margin-left: 8px;
+      }
+      .parcelas{
+        display: block;
+        font-size: $f-12;
+        color: $c-cinza5;
+      }
+    }
+    .cor{
+      margin-top: 34px;
+      .coresDisponiveis{
+        display: block;
+        margin-top: 10px;
+        .divCor{
+          display: inline-block;
+          width: 23px;
+          height: 23px;
+          border-radius: 100%;
+          border: 1px solid $c-branco;
+          margin-right: 14px;
+          &:hover{
+            cursor: pointer;
+          }
+        }
+        .ativo{
+          box-shadow: 0 0 0 2px $c-laranja;
+        }
+      }
+    }
+    .tamanho{
+      margin-top: 20px;
+      .guia{
+        color: $c-laranja;
+        text-decoration: underline;
+        margin-left: 150px;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      .tamanhosDisponiveis{
+        display: block;
+        margin: 11px 0;
+        .divTamanho{
+          display: inline;
+          padding: 7px 8px 4px 9px;
+          margin-right: 3px;
+          border: 1px solid $c-cinza1;
+          color: $c-azulCinza;
+          border-radius: 2px;
+          &:hover{
+            cursor: pointer;
+          }
+        }
+        .ativo{
+          font-weight: bold;
+          color: $c-branco;
+          background-color: $c-laranja;
+        }
+      }
+    }
+    button{
+      margin-top: 53px;
+      border: none;
+      border-radius: 3px;
+      background-color: $c-verde;
+      font-size: $f-18;
+      text-transform: uppercase;
+      text-align: center;
+      color: $c-branco;
+      padding: 21px 15px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .descricaoProduto{
+      margin-top: 15px;
+      margin-bottom: 0;
+      line-height: 200%;
+    }
+  }
+}

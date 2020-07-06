@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import "cores";
 
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+.container{
+  max-width: 1600px;
+  padding: 15px;
+}
+.bgPrimaryColor{
+  background-color: $c-laranja;
 }

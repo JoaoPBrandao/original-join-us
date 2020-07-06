@@ -9,7 +9,7 @@ import logo from "./images/logoBranco.svg";
 
 
 
-class  Footer extends React.Component{
+class Footer extends React.Component{
     constructor() {
         super();
         this.state = {
@@ -32,8 +32,9 @@ class  Footer extends React.Component{
 
     render(){
         return (
-            <div>
-                <div className="news">
+            <footer className="footerContainer">
+                <div className="container">
+                    <div className="news">
                     <span className="titulo">Assine Nossa News</span>
                     <label>
                         <span className={this.state.classNome}>Nome</span>
@@ -51,52 +52,59 @@ class  Footer extends React.Component{
                     </label>
                     <button>Enviar</button>
                 </div>
-                <footer className="Footer">
-                    <div className="redesSociais">
-                        <img src={facebook} alt="facebook" className="logoRede"/>
-                        <img src={instagram} alt="instagram" className="logoRede"/>
-                        <img src={pinterest} alt="pinterest" className="logoRede"/>
-                    </div>
-                    <div className="mainFooter">
-                        <div className="premios">
-                            <img src={vtex} alt="certificado PCI" className="logoPremio"/>
-                            <img src={ebit} alt="ebit ouro 29/11/2016" className="logoPremio"/>
+                </div>
+                <div className="Footer">
+                    <div className="container">
+                        <div className="redesSociais">
+                            <img src={facebook} alt="facebook" className="logoRede"/>
+                            <img src={instagram} alt="instagram" className="logoRede"/>
+                            <img src={pinterest} alt="pinterest" className="logoRede"/>
                         </div>
-                        <div className="links">
-                            <div className="footerNav">
-                                <div className="titulo">Institucional</div>
-                                <ul className="footerList">
-                                    <li>A Marca</li>
-                                    <li>Lojas</li>
-                                    <li>Contato</li>
-                                </ul>
+                        <div className="mainFooter">
+                            <div className="premios">
+                                <img src={vtex} alt="certificado PCI" className="logoPremio"/>
+                                <img src={ebit} alt="ebit ouro 29/11/2016" className="logoPremio"/>
                             </div>
-                            <div className="footerNav">
-                                <div className="titulo">Informações</div>
-                                <ul className="footerList">
-                                    <li>Formas de Pagamento</li>
-                                    <li>Trocas e Devoluções</li>
-                                    <li>Cuidados Com o Produto</li>
-                                </ul>
+                            <div className="links">
+                                <div className="footerNav">
+                                    <div className="titulo">Institucional</div>
+                                    <ul className="footerList">
+                                        <li>A Marca</li>
+                                        <li>Lojas</li>
+                                        <li>Contato</li>
+                                    </ul>
+                                </div>
+                                <div className="footerNav">
+                                    <div className="titulo">Informações</div>
+                                    <ul className="footerList">
+                                        <li>Formas de Pagamento</li>
+                                        <li>Trocas e Devoluções</li>
+                                        <li>Cuidados Com o Produto</li>
+                                    </ul>
+                                </div>
+                                <div className="footerNav">
+                                    <div className="titulo">Conheça</div>
+                                    <ul>
+                                        <li>Franquias e Multimarcas</li>
+                                        <li>Trabalhe com Gente</li>
+                                        <li>Procon-RJ</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div className="footerNav">
-                                <div className="titulo">Conheça</div>
-                                <ul>
-                                    <li>Franquias e Multimarcas</li>
-                                    <li>Trabalhe com Gente</li>
-                                    <li>Procon-RJ</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="fim">
-                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie massa in nunc condimentum, vel placerat lacus pulvinar. Suspendisse vel nisl eu tortor feugiat tempus vel in tortor. Nunc semper leo nec tellus gravida faucibus.</span>
-                        <div className="logoContainer">
-                            <img src={logo} alt="Logo Original" className="logo"/>
                         </div>
                     </div>
-                </footer>
-            </div>
+                    <div className="rodapeSection bgPrimaryColor">
+                        <div className="container">
+                            <div className="rodape">
+                                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie massa in nunc condimentum, vel placerat lacus pulvinar. Suspendisse vel nisl eu tortor feugiat tempus vel in tortor. Nunc semper leo nec tellus gravida faucibus.</span>
+                                <div className="logoContainer">
+                                    <img src={logo} alt="Logo Original" className="logo"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         )
     };
 }

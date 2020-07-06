@@ -1,81 +1,85 @@
 @import "cores";
 
+.footerContainer{
+    width: 100%;
+    margin-top: 155px;
+}
+
 .news{
-  border: 1px solid $cinza3;
+  border: 2px solid $c-cinza3;
   border-radius: 100%;
   text-align: center;
   box-sizing: border-box;
-  padding-top: 25px;
-  width: 120px;
-  height: 120px;
-  background-color: $branco;
+  width: 293px;
+  height: 293px;
+  background-color: $c-branco;
   right: 15px;
-  bottom: 30px;
-  position: absolute;
+  bottom: 108px;
+  position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
+  float: right;
   .titulo{
-    font-size: 7px;
+    margin-top: 39px;
+    font-size: $f-16;
     font-weight: 700;
     text-transform: uppercase;
   }
   label{
-    box-sizing: border-box;
-    padding-top: 5px;
+    margin-top: 33px;
     position: relative;
+    align-self: center;
     .texto{
       transition: all .7s;
-      font-size: 6px;
+      font-size: $f-14;
       position:absolute;
-      color: $cinza5;
+      color: $c-cinza5;
       bottom: 2px;
       &:hover{
         cursor: text;
       }
     }
     .ativo{
-      bottom: 14px;
-      font-size: 5px;
+      bottom: 20px;
+      font-size: $f-12;
     }
     input{
-      font-size: 7px;
-      color: $cinza7;
-      max-width: 80%;
+      font-size: $f-14;
+      color: $c-cinza7;
       height: 10px;
+      width: 216px;
       border: none;
-      border-bottom: .5px solid $cinza2;
+      border-bottom: 2px solid $c-cinza2;
       &:focus{
         outline: none;
       }
     }
   }
   button{
-    background-color: $laranja;
+    margin-top: 27px !important;
+    background-color: $c-laranja;
     border: none;
-    color: $branco;
-    max-width: 40%;
+    color: $c-branco;
     align-self: center;
     margin-top: 5px;
-    font-size: 5px;
-    padding: 7px 12px;
-    border-radius: 1px;
+    font-size: $f-14;
+    padding: 18px 40px;
+    border-radius: 3px;
     text-transform: uppercase;
   }
 }
 .Footer{
-  border-top: 1px solid $cinza3;
   display: flex;
   flex-direction: column;
   position: absolute;
   bottom: 0;
   width: 100%;
+  border-top: 2px solid $c-cinza3;
   .redesSociais{
-    padding-left: 18px;
+    padding-left: 60px;
     .logoRede{
-      width: auto;
-      height: 9px;
-      margin-right: 11px;
+      margin-right: 30px;
       &:hover{
         cursor: pointer;
       }
@@ -83,25 +87,25 @@
   }
   .mainFooter{
     display: flex;
+    justify-content: space-between;
+    padding-left: 60px;
     .premios{
-      padding-top: 13px;
-      padding-left: 18px;
+      padding-top: 51px;
       .logoPremio{
-        width: auto;
-        height: 22px;
         margin-right: 12px;
       }
     }
     .links{
       display: flex;
-      margin-left: 15px;
+      margin-top: 14px;
       box-sizing: border-box;
       flex-grow: 1;
+      justify-content: space-around;
+      margin-right: 20%;
       .footerNav{
-        margin-right: 45px;
         .titulo{
-          color: $cinzaAzul;
-          font-size: 5px;
+          color: $c-cinzaAzul;
+          font-size: $f-12;
           text-transform: uppercase;
           font-weight: bold;
         }
@@ -110,9 +114,9 @@
           margin: 0;
           padding: 0;
           li{
-            font-size: 5px;
-            color: $cinza7;
-            margin-top: 3px;
+            font-size: $f-14;
+            color: $c-cinza7;
+            margin-top: 15px;
             &:hover{
               cursor: pointer;
             }
@@ -121,23 +125,19 @@
       }
     }
   }
-  .fim{
-    display: flex;
-    color: $branco;
-    background-color: $laranja;
-    align-items: center;
-    margin-top: 20px;
-    span{
-      font-size: 4px;
-      margin-right: 150px;
-      margin-left: 38px;
-    }
-    .logoContainer{
-      align-self: flex-end;
-      margin-right: 25px;
-      .logo{
-        width: auto;
-        height: 10px;
+  .rodapeSection{
+    max-height: 60px;
+    margin-top: 59px;
+    .rodape{
+      display: flex;
+      color: $c-branco;
+      align-items: center;
+      justify-content: space-between;
+      span{
+        font-size: $f-12;
+      }
+      .logoContainer{
+        align-self: flex-end;
       }
     }
   }
