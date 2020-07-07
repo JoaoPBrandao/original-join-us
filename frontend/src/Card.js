@@ -1,18 +1,20 @@
+/*
+Cards da pratileira de outros produtos, recebe as props imagem, valor e cores(Array com os códigos hex das cores a serem
+exibidas, este array poderá estar vazio para um produto sem opções de cores).
+ */
 import React from 'react';
 import './Card.scss';
 
 class Card extends React.Component{
 
-    constructor() {
-        super();
-        this.state = {
-        };
+    constructor(props) {
+        super(props);
     }
     render(){
         let cores = [];
-        cores = this.props.cores.map(cor =>{
+        cores = this.props.cores.map((cor, i) =>{
            return (
-               <div className="cor" style={{backgroundColor: cor}}></div>
+               <div className="cor" style={{backgroundColor: cor}} key={i}></div>
            )
         });
         return (
