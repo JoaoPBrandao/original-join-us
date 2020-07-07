@@ -12,6 +12,8 @@ import CarteiraCarrossel from './images/carteiraCarrossel.png'
 import Play from './images/play.svg'
 import Cima from './images/cima.svg'
 import Baixo from './images/baixo.svg'
+import Modal from 'react-modal'
+import {ReactComponent as Fechar} from './images/X.svg';
 
 class Produto extends React.Component{
     constructor(props) {
@@ -50,7 +52,8 @@ class Produto extends React.Component{
             },
             corSelecionada: 0,
             tamanhoSelecionado: 0,
-            imagemSelecionada: 0
+            imagemSelecionada: 0,
+            mostrarModal: false
         };
     }
 
@@ -64,6 +67,18 @@ class Produto extends React.Component{
 
     selecionarImagem(imagem){
         this.setState({imagemSelecionada: imagem});
+    }
+
+    abrirModal () {
+        document.body.style.overflow = 'hidden';
+        document.body.style.paddingRight = '15px';
+        this.setState({ mostrarModal: true });
+    }
+
+    fecharModal () {
+        document.body.style.overflow = 'unset';
+        document.body.style.paddingRight = '0px';
+        this.setState({ mostrarModal: false });
     }
 
     gerarCores(){
@@ -166,11 +181,30 @@ class Produto extends React.Component{
                                 {tamanhos}
                             </div>
                         </div>
-                        <button> Adicionar à Sacola</button>
+                        <button className="botaoGrande" onClick={() => this.abrirModal()}> Adicionar à Sacola</button>
                         <p className="descricaoProduto">
                             Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.
                         </p>
                     </div>
+                    <Modal
+                        isOpen={this.state.mostrarModal}
+                        contentLabel="Produto adicionado ao carrinho"
+                        className="caixaModal"
+                        shouldCloseOnOverlayClick={true}
+                        onRequestClose={() => this.fecharModal()}
+                        overlayClassName="overlay"
+                        appElement={document.getElementById('root')}
+                    >
+                        <div className="controle">
+                            <Fechar className="fechar" onClick={() => this.fecharModal()}/>
+                        </div>
+                        <div className="conteudo">
+                            <img src={this.state.produto.imagens[0].exibicao} />
+                            <p className="titulo">Produto Adicionado Com Sucesso!</p>
+                            <button className="botaoGrande" onClick={() => this.fecharModal()}>Finalizar Compra</button>
+                            <p className="continuar" onClick={() => this.fecharModal()}>Continuar Comprando</p>
+                        </div>
+                    </Modal>
                 </div>
         );
     }

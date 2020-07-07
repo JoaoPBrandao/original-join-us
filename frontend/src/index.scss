@@ -10,9 +10,11 @@ html {
   min-height: 100%;
 }
 .container{
+  margin: auto;
   max-width: 1600px;
   padding: 15px;
 }
 .bgPrimaryColor{
   background-color: $c-laranja;
 }
+

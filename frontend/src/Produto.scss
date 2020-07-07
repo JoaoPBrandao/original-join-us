@@ -156,24 +156,97 @@
         }
       }
     }
-    button{
+    .botaoGrande{
       margin-top: 53px;
-      border: none;
-      border-radius: 3px;
-      background-color: $c-verde;
       font-size: $f-18;
-      text-transform: uppercase;
-      text-align: center;
-      color: $c-branco;
-      padding: 21px 15px;
-      &:hover{
-        cursor: pointer;
-      }
+      padding: 21px 0px;
     }
     .descricaoProduto{
       margin-top: 15px;
       margin-bottom: 0;
       line-height: 200%;
     }
+  }
+}
+.ReactModalPortal{
+  .caixaModal{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 62px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 445px;
+    background-color: $c-branco;
+    display: block;
+    border-radius: 3px;
+    .controle{
+      text-align: right;
+      padding-top: 16.8px;
+      padding-right: 19.83px;
+      .fechar{
+        path{
+          fill: $c-azulCinza
+        }
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+    .conteudo{
+      padding: 17px 70px 23px 70px;
+      img{
+        width: 305px;
+        height: 358.65px;
+      }
+      .titulo{
+        font-size: $f-22;
+        color: $c-laranja;
+        text-transform: uppercase;
+      }
+      .botaoGrande{
+        font-size: $f-14;
+        line-height: 20px;
+        padding: 15.5px 0px;
+      }
+      .continuar{
+        font-size: $f-14;
+        text-decoration: underline;
+        color: $c-cinzaAzul;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+    &:focus{
+      outline: none;
+    }
+  }
+  .overlay {
+    position: fixed;
+    text-content: middle;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    background-color: rgba(32, 32, 32, 0.6);
+  }
+}
+.botaoGrande{
+  border: none;
+  border-radius: 3px;
+  background-color: $c-verde;
+  text-transform: uppercase;
+  text-align: center;
+  color: $c-branco;
+  width: 100%;
+  &:hover{
+    cursor: pointer;
+  }
+  &:focus{
+    outline: none;
   }
 }

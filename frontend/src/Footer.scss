@@ -76,49 +76,51 @@
   bottom: 0;
   width: 100%;
   border-top: 2px solid $c-cinza3;
-  .redesSociais{
-    padding-left: 60px;
-    .logoRede{
-      margin-right: 30px;
-      &:hover{
-        cursor: pointer;
-      }
-    }
-  }
-  .mainFooter{
-    display: flex;
-    justify-content: space-between;
-    padding-left: 60px;
-    .premios{
-      padding-top: 51px;
-      .logoPremio{
-        margin-right: 12px;
-      }
-    }
-    .links{
-      display: flex;
-      margin-top: 14px;
-      box-sizing: border-box;
-      flex-grow: 1;
-      justify-content: space-around;
-      margin-right: 20%;
-      .footerNav{
-        .titulo{
-          color: $c-cinzaAzul;
-          font-size: $f-12;
-          text-transform: uppercase;
-          font-weight: bold;
+  .mainFooterSection{
+    .redesSociais{
+      padding-left: 60px;
+      .logoRede{
+        margin-right: 30px;
+        &:hover{
+          cursor: pointer;
         }
-        ul{
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          li{
-            font-size: $f-14;
-            color: $c-cinza7;
-            margin-top: 15px;
-            &:hover{
-              cursor: pointer;
+      }
+    }
+    .mainFooter{
+      display: flex;
+      justify-content: space-between;
+      padding-left: 60px;
+      .premios{
+        padding-top: 51px;
+        .logoPremio{
+          margin-right: 12px;
+        }
+      }
+      .links{
+        display: flex;
+        margin-top: 14px;
+        box-sizing: border-box;
+        flex-grow: 1;
+        justify-content: space-around;
+        margin-right: 20%;
+        .footerNav{
+          .titulo{
+            color: $c-cinzaAzul;
+            font-size: $f-12;
+            text-transform: uppercase;
+            font-weight: bold;
+          }
+          ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            li{
+              font-size: $f-14;
+              color: $c-cinza7;
+              margin-top: 15px;
+              &:hover{
+                cursor: pointer;
+              }
             }
           }
         }

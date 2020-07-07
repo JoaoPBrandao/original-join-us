@@ -54,41 +54,43 @@ class Footer extends React.Component{
                 </div>
                 </div>
                 <div className="Footer">
-                    <div className="container">
-                        <div className="redesSociais">
-                            <img src={facebook} alt="facebook" className="logoRede"/>
-                            <img src={instagram} alt="instagram" className="logoRede"/>
-                            <img src={pinterest} alt="pinterest" className="logoRede"/>
-                        </div>
-                        <div className="mainFooter">
-                            <div className="premios">
-                                <img src={vtex} alt="certificado PCI" className="logoPremio"/>
-                                <img src={ebit} alt="ebit ouro 29/11/2016" className="logoPremio"/>
+                    <div className="mainFooterSection">
+                        <div className="container">
+                            <div className="redesSociais">
+                                <img src={facebook} alt="facebook" className="logoRede"/>
+                                <img src={instagram} alt="instagram" className="logoRede"/>
+                                <img src={pinterest} alt="pinterest" className="logoRede"/>
                             </div>
-                            <div className="links">
-                                <div className="footerNav">
-                                    <div className="titulo">Institucional</div>
-                                    <ul className="footerList">
-                                        <li>A Marca</li>
-                                        <li>Lojas</li>
-                                        <li>Contato</li>
-                                    </ul>
+                            <div className="mainFooter">
+                                <div className="premios">
+                                    <img src={vtex} alt="certificado PCI" className="logoPremio"/>
+                                    <img src={ebit} alt="ebit ouro 29/11/2016" className="logoPremio"/>
                                 </div>
-                                <div className="footerNav">
-                                    <div className="titulo">Informações</div>
-                                    <ul className="footerList">
-                                        <li>Formas de Pagamento</li>
-                                        <li>Trocas e Devoluções</li>
-                                        <li>Cuidados Com o Produto</li>
-                                    </ul>
-                                </div>
-                                <div className="footerNav">
-                                    <div className="titulo">Conheça</div>
-                                    <ul>
-                                        <li>Franquias e Multimarcas</li>
-                                        <li>Trabalhe com Gente</li>
-                                        <li>Procon-RJ</li>
-                                    </ul>
+                                <div className="links">
+                                    <div className="footerNav">
+                                        <div className="titulo">Institucional</div>
+                                        <ul className="footerList">
+                                            <li>A Marca</li>
+                                            <li>Lojas</li>
+                                            <li>Contato</li>
+                                        </ul>
+                                    </div>
+                                    <div className="footerNav">
+                                        <div className="titulo">Informações</div>
+                                        <ul className="footerList">
+                                            <li>Formas de Pagamento</li>
+                                            <li>Trocas e Devoluções</li>
+                                            <li>Cuidados Com o Produto</li>
+                                        </ul>
+                                    </div>
+                                    <div className="footerNav">
+                                        <div className="titulo">Conheça</div>
+                                        <ul>
+                                            <li>Franquias e Multimarcas</li>
+                                            <li>Trabalhe com Gente</li>
+                                            <li>Procon-RJ</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
