@@ -19,46 +19,55 @@ class Outros extends React.Component{
         this.state = {
             produtos: [
                 {
+                    nome: 'Bolsa',
                     imagem: Bolsa,
                     valor: "1",
                     cores: ['#A9095E', '#6B85C1', '#A14830', '#000000']
                 },
                 {
+                    nome: 'Chinelo',
                     imagem: Chinelo,
                     valor: "2",
                     cores: ['#A9095E', '#6B85C1', '#A14830', '#000000']
                 },
                 {
+                    nome: 'Rasteira',
                     imagem: Rasteira,
                     valor: "3",
                     cores: []
                 },
                 {
+                    nome: 'Carteira',
                     imagem: Carteira,
                     valor: "4",
                     cores: ['#6B85C1', '#A14830', '#000000']
                 },
                 {
+                    nome: 'Chinelo',
                     imagem: Chinelo,
                     valor: "5",
                     cores: ['#A9095E', '#6B85C1', '#A14830', '#000000']
                 },
                 {
+                    nome: 'Rasteira',
                     imagem: Rasteira,
                     valor: "6",
                     cores: []
                 },
                 {
+                    nome: 'Carteira',
                     imagem: Carteira,
                     valor: "7",
                     cores: ['#6B85C1', '#A14830', '#000000']
                 },
                 {
+                    nome: 'Bolsa',
                     imagem: Bolsa,
                     valor: "8",
                     cores: ['#A9095E', '#6B85C1', '#A14830', '#000000']
                 },
                 {
+                    nome: 'Carteira',
                     imagem: Carteira,
                     valor: "9",
                     cores: ['#6B85C1', '#A14830', '#000000']
@@ -109,13 +118,13 @@ class Outros extends React.Component{
         this.setState({exibidos, inicio, fim, paginaAtual});
     }
     moverCarrosselEsquerda(){
-        let {inicio, fim, paginaAtual, tamanho} = this.state;
+        let {inicio, fim, paginaAtual} = this.state;
         let exibidos;
         if(inicio === 0){
             return
         }
         paginaAtual -= 1;
-        if(fim % 4 != 0){
+        if(fim % 4 !== 0){
             inicio -= fim%4;
             fim -= fim%4
         }else{

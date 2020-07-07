@@ -1,49 +1,147 @@
 import React from 'react';
 import './Produto.scss';
 import Rasteira from './images/rasteira.png'
+import Chinelo from './images/chinelo.png'
+import Bolsa from './images/bolsa.png'
+import Carteira from './images/carteira.png'
 import RasteiraVideo from './images/rasteiraVideo.png'
 import RasteiraCarrossel from './images/rasteiraCarrossel.png'
+import ChineloCarrossel from './images/chineloCarrossel.png'
+import BolsaCarrossel from './images/bolsaCarrossel.png'
+import CarteiraCarrossel from './images/carteiraCarrossel.png'
 import Play from './images/play.svg'
 import Cima from './images/cima.svg'
 import Baixo from './images/baixo.svg'
 
 class Produto extends React.Component{
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             produto: {
                 nome: 'Rasteira Tira Dedo',
                 codigo: 'RT 0568 | 03.07.0653',
                 precoOriginal: '69,00',
-                precoAtual: '55,20'
-            }
+                precoAtual: '55,20',
+                cores:[
+                    {codigo: '#A9095E', nome: 'Fucsia'},
+                    {codigo: '#2A5A75', nome: 'Azul'},
+                    {codigo: '#A14830', nome: 'Marrom'},
+                    {codigo: '#000000', nome: 'Preto'}
+                    ],
+                tamanhos:[33, 34, 35, 36, 37, 38, 39, 40, 41, 42],
+                imagens: [
+                    {
+                        miniatura: RasteiraCarrossel,
+                        exibicao: Rasteira
+                    },
+                    {
+                        miniatura: ChineloCarrossel,
+                        exibicao: Chinelo
+                    },
+                    {
+                        miniatura: BolsaCarrossel,
+                        exibicao: Bolsa
+                    },
+                    {
+                        miniatura: CarteiraCarrossel,
+                        exibicao: Carteira
+                    },
+                ]
+            },
+            corSelecionada: 0,
+            tamanhoSelecionado: 0,
+            imagemSelecionada: 0
         };
     }
 
+    selecionarCor(cor){
+        this.setState({corSelecionada: cor});
+    }
+
+    selecionarTamanho(tamanho){
+        this.setState({tamanhoSelecionado: tamanho});
+    }
+
+    selecionarImagem(imagem){
+        this.setState({imagemSelecionada: imagem});
+    }
+
+    gerarCores(){
+        return this.state.produto.cores.map((cor, i) =>{
+            return (
+                <div
+                    className={`divCor ${(this.state.corSelecionada === i) ? 'ativo' : ''}`}
+                    style={{backgroundColor: cor.codigo}}
+                    onClick={() => this.selecionarCor(i)}
+                    key={i}
+                />
+            )
+        });
+    }
+
+    gerarTamanhos(){
+        return this.state.produto.tamanhos.map((tamanho, i) =>{
+            return (
+                <div
+                    className={`divTamanho ${(this.state.tamanhoSelecionado === i) ? 'ativo' : ''}`}
+                    onClick={() => this.selecionarTamanho(i)}
+                    key={i}
+                >{tamanho}</div>
+            )
+        });
+    }
+
+    gerarCarrossel(){
+        return this.state.produto.imagens.map((imagem, i) =>{
+            return (
+                <img
+                    src={imagem.miniatura}
+                    className={`imagemCarrossel ${(this.state.imagemSelecionada === i) ? 'ativo' : ''}`}
+                    onClick={() => this.selecionarImagem(i)}
+                    key={i}
+                 />
+            )
+        });
+    }
+
+    controleCarrossel(movimento){
+        let selecionado = this.state.imagemSelecionada;
+        selecionado += movimento;
+        if (selecionado >= this.state.produto.imagens.length){
+            selecionado = 0;
+        }
+        if (selecionado < 0){
+            selecionado = this.state.produto.imagens.length-1;
+        }
+        this.selecionarImagem(selecionado)
+    }
+
     render(){
+        let cores = this.gerarCores();
+        let tamanhos = this.gerarTamanhos();
+        let carrossel = this.gerarCarrossel();
         return (
                 <div className="Produto">
-                    <div className="fotosVideo">
-                        <div className="video">
-                            <p>Vídeo</p>
-                            <div className="videoButtonContainer">
-                                <img src={Play} className="play" />
-                                <img src={RasteiraVideo} className="videoTumb"/>
+                    <div className="carrosselContainer">
+                        <div className="fotosVideo">
+                            <div className="video">
+                                <p>Vídeo</p>
+                                <div className="videoButtonContainer">
+                                    <img src={Play} className="play" />
+                                    <img src={RasteiraVideo} className="videoTumb"/>
+                                </div>
+                            </div>
+                            <div className="carrossel">
+                                <img src={Cima} className="controleCarrossel" onClick={() => this.controleCarrossel(-1)}/>
+                                <div className="imagens">
+                                    {carrossel}
+                                </div>
+                                <img src={Baixo} className="controleCarrossel" onClick={() => this.controleCarrossel(1)}/>
                             </div>
                         </div>
-                        <div className="carrossel">
-                            <img src={Cima} className="controleCarrossel" />
-                            <div className="imagens">
-                                <img src={RasteiraCarrossel} className="imagemCarrossel ativo"/>
-                                <img src={RasteiraCarrossel} className="imagemCarrossel"/>
-                                <img src={RasteiraCarrossel} className="imagemCarrossel"/>
-                                <img src={RasteiraCarrossel} className="imagemCarrossel"/>
-                            </div>
-                            <img src={Baixo} className="controleCarrossel" />
+                        <div className="imagem">
+                            <img src={this.state.produto.imagens[this.state.imagemSelecionada].exibicao} />
                         </div>
-                    </div>
-                    <div className="imagem">
-                        <img src={Rasteira} />
                     </div>
                     <div className="descricao">
                         <span className="nome">{this.state.produto.nome}</span>
@@ -55,29 +153,17 @@ class Produto extends React.Component{
                         </div>
                         <div className="cor">
                             Cor:
-                            <span className="selecaoAtual"> (Fucsia)</span>
+                            <span className="selecaoAtual"> ({this.state.produto.cores[this.state.corSelecionada].nome})</span>
                             <div className="coresDisponiveis">
-                                <div className="divCor ativo" style={{backgroundColor: '#A9095E'}}></div>
-                                <div className="divCor" style={{backgroundColor: '#2A5A75'}}></div>
-                                <div className="divCor" style={{backgroundColor: '#A14830'}}></div>
-                                <div className="divCor" style={{backgroundColor: '#000000'}}></div>
+                                {cores}
                             </div>
                         </div>
                         <div className="tamanho">
                             Tamanho:
-                            <span className="selecaoAtual"> (37)</span>
+                            <span className="selecaoAtual"> ({this.state.produto.tamanhos[this.state.tamanhoSelecionado]})</span>
                             <span className="guia">Guia de medidas</span>
                             <div className="tamanhosDisponiveis">
-                                <div className="divTamanho">33</div>
-                                <div className="divTamanho">34</div>
-                                <div className="divTamanho">35</div>
-                                <div className="divTamanho">36</div>
-                                <div className="divTamanho ativo">37</div>
-                                <div className="divTamanho">38</div>
-                                <div className="divTamanho">39</div>
-                                <div className="divTamanho">40</div>
-                                <div className="divTamanho">41</div>
-                                <div className="divTamanho">42</div>
+                                {tamanhos}
                             </div>
                         </div>
                         <button> Adicionar à Sacola</button>

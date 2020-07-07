@@ -2,63 +2,69 @@
 
 .Produto{
   display: flex;
-  justify-content: space-between;
-  margin-top: 18px;
-  padding-right: 60px;
-  .fotosVideo{
-    img{
-      &:hover{
-        cursor: pointer;
-      }
-    }
-    .video{
-      p{
-        text-align: center;
-        font-size: $f-12;
-        color: $c-laranja;
-        line-height: 16px;
-      }
-      .videoButtonContainer{
-        position: relative;
-        .play{
-          position: absolute;
-          left: 23.5px;
-          top: 6.42px;
-        }
-      }
-    }
-    .carrossel{
-      margin-top: 10px;
+  justify-content: space-around;
+  .carrosselContainer{
+    display: flex;
+    .fotosVideo{
       img{
-        display: block;
-        margin: auto;
-      }
-      .controleCarrossel{
-      }
-      .imagens{
-        margin: 21px 0;
-        .imagemCarrossel{
-          margin-bottom: 9px;
-          opacity: .5;
+        &:hover{
+          cursor: pointer;
         }
-        .ativo{
-          opacity: 1;
+      }
+      .video{
+        p{
+          text-align: center;
+          font-size: $f-12;
+          color: $c-laranja;
+          line-height: 16px;
         }
-        &:last-child{
-          margin-bottom: 0;
+        .videoButtonContainer{
+          position: relative;
+          .play{
+            position: absolute;
+            left: 23.5px;
+            top: 6.42px;
+          }
+        }
+      }
+      .carrossel{
+        margin-top: 10px;
+        img{
+          display: block;
+          margin: auto;
+        }
+        .controleCarrossel{
+        }
+        .imagens{
+          margin: 21px 0;
+          .imagemCarrossel{
+            margin-bottom: 9px;
+            opacity: .5;
+          }
+          .ativo{
+            opacity: 1;
+          }
+          &:last-child{
+            margin-bottom: 0;
+          }
         }
       }
     }
-  }
-  .imagem{
+    .imagem{
+      margin-left: 56px;
+      img{
+        width: 430px;
+        height: 556px;
+      }
+    }
   }
   .descricao{
-    width: 444px;
+    width: 440px;
     border: 2px solid #D2E1DF;
     border-radius: 2px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 20px 19px 15px 20px;
     font-size: $f-14;
     height: fit-content;
     .selecaoAtual{
@@ -123,14 +129,15 @@
       .guia{
         color: $c-laranja;
         text-decoration: underline;
-        margin-left: 150px;
+        float: right;
+        margin-right: 58px;
         &:hover{
           cursor: pointer;
         }
       }
       .tamanhosDisponiveis{
         display: block;
-        margin: 11px 0;
+        margin: 15px 0;
         .divTamanho{
           display: inline;
           padding: 7px 8px 4px 9px;
