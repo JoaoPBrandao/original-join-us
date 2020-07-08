@@ -80,6 +80,7 @@
         font-size: $f-14;
         color: $c-vermelho;
         text-decoration: line-through;
+        margin-right: 8px;
         &:after{
           content: "";
           border-right: 1px solid $c-vermelho;
@@ -90,7 +91,6 @@
         font-size: $f-20;
         color: $c-cinza6;
         font-weight: bold;
-        margin-left: 8px;
       }
       .parcelas{
         display: block;
@@ -152,6 +152,10 @@
       margin-bottom: 0;
       line-height: 200%;
     }
+  }
+  .mensagem{
+    font-size: $f-22;
+    font-weight: bold;
   }
 }
 .ReactModalPortal{
