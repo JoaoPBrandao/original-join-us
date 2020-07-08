@@ -12,6 +12,7 @@ import Baixo from './images/baixo.svg'
 import Modal from 'react-modal'
 import {ReactComponent as Fechar} from './images/X.svg';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 class Produto extends React.Component{
     constructor(props) {
@@ -110,7 +111,7 @@ class Produto extends React.Component{
     }
 
     componentDidMount() {
-        axios.get('http://localhost:3300/produto/0')
+        axios.get(`http://localhost:3300/produto/${this.props.id}`)
             .then(resposta => {
                 let produto = resposta.data;
                 produto.desconto = produto.precoAtual < produto.precoOriginal;
@@ -186,11 +187,13 @@ class Produto extends React.Component{
                 <div className="carrosselContainer">
                     <div className="fotosVideo">
                         <div className="video clicavel">
-                            <p>Vídeo</p>
-                            <div className="videoButtonContainer">
-                                <img src={Play} className="play" />
-                                <img src={this.state.produto.videoThumb} className="videoTumb"/>
-                            </div>
+                            <Link to={'/2'}>
+                                <p>Vídeo</p>
+                                <div className="videoButtonContainer">
+                                    <img src={Play} className="play" />
+                                    <img src={this.state.produto.videoThumb} className="videoTumb"/>
+                                </div>
+                            </Link>
                         </div>
                         <div className="carrossel">
                             <img src={Cima} className="controleCarrossel clicavel" onClick={() => this.controleCarrossel(-1)}/>
