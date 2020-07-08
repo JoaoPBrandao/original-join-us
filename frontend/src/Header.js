@@ -3,11 +3,7 @@ import logo from './images/logo.svg';
 import lupa from './images/lupa.svg';
 import carrinho from './images/carrinho.svg';
 import './Header.scss';
-import {ReactComponent as Fechar} from "./images/X.svg";
-import {ReactComponent as Adicionar} from "./images/mais.svg";
-import {ReactComponent as Subtrair} from "./images/menos.svg";
-import Rasteira from "./images/rasteira.png";
-import Modal from "react-modal";
+import Carrinho from './Carrinho';
 
 class Header extends React.Component{
 
@@ -59,143 +55,14 @@ class Header extends React.Component{
                                     <img src={carrinho} alt="sacola"/>
                                     0
                                 </div>
+                                <Carrinho
+                                    mostrarModal={this.state.mostrarModal}
+                                    fecharModal={() => this.fecharModal()}
+                                />
                             </div>
                         </div>
                     </div>
                 </nav>
-                    <Modal
-                        isOpen={this.state.mostrarModal}
-                        contentLabel="Carrinho de compras"
-                        className="carrinhoModal"
-                        shouldCloseOnOverlayClick={true}
-                        onRequestClose={() => this.fecharModal()}
-                        overlayClassName="overlay"
-                        appElement={document.getElementById('root')}
-                    >
-                        <div className="controle">
-                            <Fechar className="fechar" onClick={() => this.fecharModal()}/>
-                        </div>
-                        <div className="headerModal">
-                            <span className="titulo">Sacola</span>
-                            <span className="quantidade">5 Itens</span>
-                        </div>
-                        <div className="bodyModal">
-                            <div className="produto">
-                                <img src={Rasteira}/>
-                                <div className="informacoes">
-                                    <span className="nome">Rasteira Tira Dedo</span>
-                                    <span className="preco">R$ 49,90</span>
-                                </div>
-                                <div className="quantidade">
-                                    <span className="controleQuantidade">-</span>
-                                    01
-                                    <span className="controleQuantidade">+</span>
-                                </div>
-                                <Fechar className="remover"/>
-                            </div>
-                            <div className="produto">
-                                <img src={Rasteira}/>
-                                <div className="informacoes">
-                                    <span className="nome">Rasteira Tira Dedo</span>
-                                    <span className="preco">R$ 49,90</span>
-                                </div>
-                                <div className="quantidade">
-                                    <span className="controleQuantidade">-</span>
-                                    01
-                                    <span className="controleQuantidade">+</span>
-                                </div>
-                                <Fechar className="remover"/>
-                            </div>
-                            <div className="produto">
-                                <img src={Rasteira}/>
-                                <div className="informacoes">
-                                    <span className="nome">Rasteira Tira Dedo</span>
-                                    <span className="preco">R$ 49,90</span>
-                                </div>
-                                <div className="quantidade">
-                                    <span className="controleQuantidade">-</span>
-                                    01
-                                    <span className="controleQuantidade">+</span>
-                                </div>
-                                <Fechar className="remover"/>
-                            </div>
-                            <div className="produto">
-                                <img src={Rasteira}/>
-                                <div className="informacoes">
-                                    <span className="nome">Rasteira Tira Dedo</span>
-                                    <span className="preco">R$ 49,90</span>
-                                </div>
-                                <div className="quantidade">
-                                    <span className="controleQuantidade">-</span>
-                                    01
-                                    <span className="controleQuantidade">+</span>
-                                </div>
-                                <Fechar className="remover"/>
-                            </div>
-                            <div className="produto">
-                                <img src={Rasteira}/>
-                                <div className="informacoes">
-                                    <span className="nome">Rasteira Tira Dedo</span>
-                                    <span className="preco">R$ 49,90</span>
-                                </div>
-                                <div className="quantidade">
-                                    <span className="controleQuantidade">-</span>
-                                    01
-                                    <span className="controleQuantidade">+</span>
-                                </div>
-                                <Fechar className="remover"/>
-                            </div>
-                            <div className="produto">
-                                <img src={Rasteira}/>
-                                <div className="informacoes">
-                                    <span className="nome">Rasteira Tira Dedo</span>
-                                    <span className="preco">R$ 49,90</span>
-                                </div>
-                                <div className="quantidade">
-                                    <span className="controleQuantidade">-</span>
-                                    01
-                                    <span className="controleQuantidade">+</span>
-                                </div>
-                                <Fechar className="remover"/>
-                            </div>
-                            <div className="produto">
-                                <img src={Rasteira}/>
-                                <div className="informacoes">
-                                    <span className="nome">Rasteira Tira Dedo</span>
-                                    <span className="preco">R$ 49,90</span>
-                                </div>
-                                <div className="quantidade">
-                                    <span className="controleQuantidade">-</span>
-                                    01
-                                    <span className="controleQuantidade">+</span>
-                                </div>
-                                <Fechar className="remover"/>
-                            </div>
-                            <div className="produto">
-                                <img src={Rasteira}/>
-                                <div className="informacoes">
-                                    <span className="nome">Rasteira Tira Dedo</span>
-                                    <span className="preco">R$ 49,90</span>
-                                </div>
-                                <div className="quantidade">
-                                    <span className="controleQuantidade">-</span>
-                                    01
-                                    <span className="controleQuantidade">+</span>
-                                </div>
-                                <Fechar className="remover"/>
-                            </div>
-                        </div>
-                        <div className="footerModal">
-                            <div className="freteGratis">Faltam R$ xx,xx para você <span className="destaque">Ganhar Frete Grátis</span></div>
-                            <div className="finalizar">
-                                <div className="valor">
-                                    <span className="valorTotal">Total: R$ 149,00</span>
-                                    <span className="parcelas">até 3x de R$ 49,90 sem juros</span>
-                                </div>
-                                <button className="botaoGrande">Finalizar Compra</button>
-                            </div>
-                        </div>
-                    </Modal>
             </header>
         );
     }
