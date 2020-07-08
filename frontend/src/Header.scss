@@ -76,3 +76,175 @@
     }
   }
 }
+.containerModal{
+  position: relative;
+}
+.ReactModalPortal {
+  .carrinhoModal {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    background-color: $c-branco;
+    width: 40%;
+    max-width: 525px;
+    display: flex;
+    flex-direction: column;
+    &:focus{
+      outline: none;
+    }
+    .controle{
+      display: block;
+      text-align: right;
+      padding-top: 12px;
+      padding-right: 12px;
+      .fechar{
+        path{
+          fill: $c-azulCinza
+        }
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+    .headerModal{
+      margin-left: 20px;
+      margin-right: 39px;
+      border-bottom: 1px solid $c-cinza2;
+      padding-left: 20px;
+      padding-bottom: 11px;
+      .titulo{
+        display: block;
+        color: $c-laranja;
+        text-transform: uppercase;
+        font-size: $f-26;
+      }
+      .quantidade{
+        display: block;
+        font-size: $f-18;
+        color: $c-cinzaAzul;
+      }
+    }
+    .bodyModal{
+      flex-grow: 1;
+      overflow: auto;
+      margin-top: 30px;
+      margin-left: 30px;
+      margin-bottom: 18%;
+      margin-right: 20px;
+      .produto{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 30px;
+        margin-bottom: 35.67px;
+        img{
+          width: 46px;
+          height: 59px;
+        }
+        .informacoes{
+          .nome{
+            display: block;
+            color: $c-cinza7;
+            font-size: $f-12;
+          }
+          .preco{
+            display: block;
+            line-height: 20px;
+            font-size: $f-14;
+            font-weight: bold;
+          }
+        }
+        .quantidade{
+          color: $c-azulCinza;
+          line-height: 17px;
+          font-size: $f-14;
+          .controleQuantidade{
+            text-align: center;
+            color: $c-cinzaAzul;
+            font-size: $f-20;
+            line-height: 23px;
+            display: inline-block;
+            font-weight: bold;
+            padding-left: 13px;
+            padding-right: 13px;
+            &:hover{
+              cursor: pointer;
+            }
+          }
+        }
+        .remover{
+          width: 9.33px;
+          height: auto;
+          path{
+            fill: $c-cinza3;
+          }
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+      &::-webkit-scrollbar-track {
+        background: $c-cinza2;
+        border-radius: 3px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $c-laranja;
+        border-radius: 3px;
+      }
+    }
+    .footerModal{
+      .freteGratis{
+        text-align: center;
+        display: block;
+        width: 100%;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        background-color: $c-cinzaAzul;
+        color: $c-branco;
+        font-size: $f-14;
+        .destaque{
+          font-weight: bold;
+        }
+      }
+      .finalizar{
+        background-color: $c-cinza2;
+        display: flex;
+        padding: 23px 40.5px 24px 31px;
+        justify-content: space-between;
+        align-items: center;
+        .valor{
+          .valorTotal{
+            font-weight: bold;
+            font-size: $f-16;
+            display: block;
+            white-space: nowrap;
+          }
+          .parcelas{
+            font-size: $f-12;
+            display: block;
+            white-space: nowrap;
+          }
+        }
+        .botaoGrande{
+          display: inline;
+          width: 236px;
+          height: 42px;
+          font-size: $f-12;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1600px) {
+    .carrinhoModal {
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      transform: translate(537.5px);
+    }
+  }
+}

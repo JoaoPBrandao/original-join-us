@@ -71,13 +71,11 @@ class Produto extends React.Component{
 
     abrirModal () {
         document.body.style.overflow = 'hidden';
-        document.body.style.paddingRight = '15px';
         this.setState({ mostrarModal: true });
     }
 
     fecharModal () {
         document.body.style.overflow = 'unset';
-        document.body.style.paddingRight = '0px';
         this.setState({ mostrarModal: false });
     }
 
