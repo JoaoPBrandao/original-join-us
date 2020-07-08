@@ -4,23 +4,29 @@ exibidas, este array poderá estar vazio para um produto sem opções de cores).
  */
 import React from 'react';
 import './Card.scss';
+import {Link} from 'react-router-dom';
 
 class Card extends React.Component{
 
     render(){
         let cores = [];
+        let valor = this.props.valor;
+        valor = valor.toFixed(2);
+        valor = valor.replace('.',',');
         cores = this.props.cores.map((cor, i) =>{
            return (
-               <div className="cor" style={{backgroundColor: cor}} key={i}></div>
+               <div className="cor" style={{backgroundColor: cor.codigo}} key={i}></div>
            )
         });
         return (
             <div className="Card">
-                <img src={this.props.imagem} alt={this.props.nome}/>
-                <div className="informacoes">
-                    <span className="valor">R$ {this.props.valor}</span>
-                    <span className="cores"> {cores} </span>
-                </div>
+                <Link to={`/${this.props.id}`} onClick={() => window.scrollTo(0, 0)}>
+                    <img src={this.props.imagem} alt={this.props.nome}/>
+                    <div className="informacoes">
+                        <span className="valor">R$ {valor}</span>
+                        <span className="cores"> {cores} </span>
+                    </div>
+                </Link>
             </div>
         );
     }

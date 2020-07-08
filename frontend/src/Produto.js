@@ -12,7 +12,6 @@ import Baixo from './images/baixo.svg'
 import Modal from 'react-modal'
 import {ReactComponent as Fechar} from './images/X.svg';
 import axios from 'axios';
-import {Link} from 'react-router-dom';
 
 class Produto extends React.Component{
     constructor(props) {
@@ -187,13 +186,11 @@ class Produto extends React.Component{
                 <div className="carrosselContainer">
                     <div className="fotosVideo">
                         <div className="video clicavel">
-                            <Link to={'/2'}>
-                                <p>Vídeo</p>
-                                <div className="videoButtonContainer">
-                                    <img src={Play} className="play" />
-                                    <img src={this.state.produto.videoThumb} className="videoTumb"/>
-                                </div>
-                            </Link>
+                            <p>Vídeo</p>
+                            <div className="videoButtonContainer">
+                                <img src={Play} className="play" />
+                                <img src={this.state.produto.videoThumb} className="videoTumb"/>
+                            </div>
                         </div>
                         <div className="carrossel">
                             <img src={Cima} className="controleCarrossel clicavel" onClick={() => this.controleCarrossel(-1)}/>
@@ -235,7 +232,7 @@ class Produto extends React.Component{
                         <Fechar className="fechar" onClick={() => this.fecharModal()}/>
                     </div>
                     <div className="conteudo">
-                        <img src={this.state.produto.imagens[0].exibicao} />
+                        <img src={this.state.produto.imagens[0].grande} />
                         <p className="titulo">Produto Adicionado Com Sucesso!</p>
                         <button className="botaoGrande" onClick={() => this.fecharModal()}>Finalizar Compra</button>
                         <p className="continuar" onClick={() => this.fecharModal()}>Continuar Comprando</p>

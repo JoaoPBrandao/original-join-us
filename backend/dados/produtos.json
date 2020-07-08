@@ -1,5 +1,4 @@
-{
-  "produtos": [
+[
     {
       "nome": "Rasteira Tira Dedo",
       "codigo": "RT 0568 | 03.07.0653",
@@ -58,6 +57,448 @@
         }
       ],
       "videoThumb": "http://localhost:3300/images/rasteiraVideo.png"
+    },
+    {
+      "nome": "Bolsa",
+      "codigo": "RT 0568 | 03.07.0653",
+      "precoOriginal": 69.00,
+      "precoAtual": 69.00,
+      "cores": [
+        {
+          "codigo": "#A9095E",
+          "nome": "Fucsia"
+        },
+        {
+          "codigo": "#2A5A75",
+          "nome": "Azul"
+        },
+        {
+          "codigo": "#A14830",
+          "nome": "Marrom"
+        },
+        {
+          "codigo": "#000000",
+          "nome": "Preto"
+        }
+      ],
+      "tamanhos": [],
+      "imagens": [
+        {
+          "grande": "http://localhost:3300/images/bolsaMedio.png",
+          "medio": "http://localhost:3300/images/bolsaMedio.png",
+          "pequeno": "http://localhost:3300/images/bolsaPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/rasteiraGrande.png",
+          "medio": "http://localhost:3300/images/rasteiraMedio.png",
+          "pequeno": "http://localhost:3300/images/rasteiraPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/chineloMedio.png",
+          "medio": "http://localhost:3300/images/chineloMedio.png",
+          "pequeno": "http://localhost:3300/images/chineloPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/carteiraMedio.png",
+          "medio": "http://localhost:3300/images/carteiraMedio.png",
+          "pequeno": "http://localhost:3300/images/carteiraPequeno.png"
+        }
+      ],
+      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png"
+    },
+    {
+      "nome": "Chinelo",
+      "codigo": "RT 0568 | 03.07.0653",
+      "precoOriginal": 69.00,
+      "precoAtual": 55.20,
+      "cores": [
+        {
+          "codigo": "#A9095E",
+          "nome": "Fucsia"
+        },
+        {
+          "codigo": "#2A5A75",
+          "nome": "Azul"
+        },
+        {
+          "codigo": "#A14830",
+          "nome": "Marrom"
+        },
+        {
+          "codigo": "#000000",
+          "nome": "Preto"
+        }
+      ],
+      "tamanhos": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "imagens": [
+        {
+          "grande": "http://localhost:3300/images/chineloMedio.png",
+          "medio": "http://localhost:3300/images/chineloMedio.png",
+          "pequeno": "http://localhost:3300/images/chineloPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/rasteiraGrande.png",
+          "medio": "http://localhost:3300/images/rasteiraMedio.png",
+          "pequeno": "http://localhost:3300/images/rasteiraPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/bolsaMedio.png",
+          "medio": "http://localhost:3300/images/bolsaMedio.png",
+          "pequeno": "http://localhost:3300/images/bolsaPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/carteiraMedio.png",
+          "medio": "http://localhost:3300/images/carteiraMedio.png",
+          "pequeno": "http://localhost:3300/images/carteiraPequeno.png"
+        }
+      ],
+      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png"
+    },
+    {
+      "nome": "Rasteira",
+      "codigo": "RT 0568 | 03.07.0653",
+      "precoOriginal": 69.00,
+      "precoAtual": 55.20,
+      "cores": [],
+      "tamanhos": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "imagens": [
+        {
+          "grande": "http://localhost:3300/images/rasteiraGrande.png",
+          "medio": "http://localhost:3300/images/rasteiraMedio.png",
+          "pequeno": "http://localhost:3300/images/rasteiraPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/bolsaMedio.png",
+          "medio": "http://localhost:3300/images/bolsaMedio.png",
+          "pequeno": "http://localhost:3300/images/bolsaPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/chineloMedio.png",
+          "medio": "http://localhost:3300/images/chineloMedio.png",
+          "pequeno": "http://localhost:3300/images/chineloPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/carteiraMedio.png",
+          "medio": "http://localhost:3300/images/carteiraMedio.png",
+          "pequeno": "http://localhost:3300/images/carteiraPequeno.png"
+        }
+      ],
+      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png"
+    },
+    {
+      "nome": "Carteira",
+      "codigo": "RT 0568 | 03.07.0653",
+      "precoOriginal": 69.00,
+      "precoAtual": 55.20,
+      "cores": [
+        {
+          "codigo": "#2A5A75",
+          "nome": "Azul"
+        },
+        {
+          "codigo": "#A14830",
+          "nome": "Marrom"
+        },
+        {
+          "codigo": "#000000",
+          "nome": "Preto"
+        }
+      ],
+      "tamanhos": [],
+      "imagens": [
+        {
+          "grande": "http://localhost:3300/images/carteiraMedio.png",
+          "medio": "http://localhost:3300/images/carteiraMedio.png",
+          "pequeno": "http://localhost:3300/images/carteiraPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/rasteiraGrande.png",
+          "medio": "http://localhost:3300/images/rasteiraMedio.png",
+          "pequeno": "http://localhost:3300/images/rasteiraPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/bolsaMedio.png",
+          "medio": "http://localhost:3300/images/bolsaMedio.png",
+          "pequeno": "http://localhost:3300/images/bolsaPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/chineloMedio.png",
+          "medio": "http://localhost:3300/images/chineloMedio.png",
+          "pequeno": "http://localhost:3300/images/chineloPequeno.png"
+        }
+      ],
+      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png"
+    },
+    {
+      "nome": "Bolsa",
+      "codigo": "RT 0568 | 03.07.0653",
+      "precoOriginal": 69.00,
+      "precoAtual": 69.00,
+      "cores": [
+        {
+          "codigo": "#A9095E",
+          "nome": "Fucsia"
+        },
+        {
+          "codigo": "#2A5A75",
+          "nome": "Azul"
+        },
+        {
+          "codigo": "#A14830",
+          "nome": "Marrom"
+        },
+        {
+          "codigo": "#000000",
+          "nome": "Preto"
+        }
+      ],
+      "tamanhos": [],
+      "imagens": [
+        {
+          "grande": "http://localhost:3300/images/bolsaMedio.png",
+          "medio": "http://localhost:3300/images/bolsaMedio.png",
+          "pequeno": "http://localhost:3300/images/bolsaPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/rasteiraGrande.png",
+          "medio": "http://localhost:3300/images/rasteiraMedio.png",
+          "pequeno": "http://localhost:3300/images/rasteiraPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/chineloMedio.png",
+          "medio": "http://localhost:3300/images/chineloMedio.png",
+          "pequeno": "http://localhost:3300/images/chineloPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/carteiraMedio.png",
+          "medio": "http://localhost:3300/images/carteiraMedio.png",
+          "pequeno": "http://localhost:3300/images/carteiraPequeno.png"
+        }
+      ],
+      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png"
+    },
+    {
+      "nome": "Rasteira",
+      "codigo": "RT 0568 | 03.07.0653",
+      "precoOriginal": 69.00,
+      "precoAtual": 55.20,
+      "cores": [],
+      "tamanhos": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "imagens": [
+        {
+          "grande": "http://localhost:3300/images/rasteiraGrande.png",
+          "medio": "http://localhost:3300/images/rasteiraMedio.png",
+          "pequeno": "http://localhost:3300/images/rasteiraPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/bolsaMedio.png",
+          "medio": "http://localhost:3300/images/bolsaMedio.png",
+          "pequeno": "http://localhost:3300/images/bolsaPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/chineloMedio.png",
+          "medio": "http://localhost:3300/images/chineloMedio.png",
+          "pequeno": "http://localhost:3300/images/chineloPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/carteiraMedio.png",
+          "medio": "http://localhost:3300/images/carteiraMedio.png",
+          "pequeno": "http://localhost:3300/images/carteiraPequeno.png"
+        }
+      ],
+      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png"
+    },
+    {
+      "nome": "Rasteira Tira Dedo",
+      "codigo": "RT 0568 | 03.07.0653",
+      "precoOriginal": 69.00,
+      "precoAtual": 55.20,
+      "cores": [
+        {
+          "codigo": "#A9095E",
+          "nome": "Fucsia"
+        },
+        {
+          "codigo": "#2A5A75",
+          "nome": "Azul"
+        },
+        {
+          "codigo": "#A14830",
+          "nome": "Marrom"
+        },
+        {
+          "codigo": "#000000",
+          "nome": "Preto"
+        }
+      ],
+      "tamanhos": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "imagens": [
+        {
+          "grande": "http://localhost:3300/images/rasteiraGrande.png",
+          "medio": "http://localhost:3300/images/rasteiraMedio.png",
+          "pequeno": "http://localhost:3300/images/rasteiraPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/bolsaMedio.png",
+          "medio": "http://localhost:3300/images/bolsaMedio.png",
+          "pequeno": "http://localhost:3300/images/bolsaPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/chineloMedio.png",
+          "medio": "http://localhost:3300/images/chineloMedio.png",
+          "pequeno": "http://localhost:3300/images/chineloPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/carteiraMedio.png",
+          "medio": "http://localhost:3300/images/carteiraMedio.png",
+          "pequeno": "http://localhost:3300/images/carteiraPequeno.png"
+        }
+      ],
+      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png"
+    },
+    {
+      "nome": "Chinelo",
+      "codigo": "RT 0568 | 03.07.0653",
+      "precoOriginal": 69.00,
+      "precoAtual": 55.20,
+      "cores": [
+        {
+          "codigo": "#A9095E",
+          "nome": "Fucsia"
+        },
+        {
+          "codigo": "#2A5A75",
+          "nome": "Azul"
+        },
+        {
+          "codigo": "#A14830",
+          "nome": "Marrom"
+        },
+        {
+          "codigo": "#000000",
+          "nome": "Preto"
+        }
+      ],
+      "tamanhos": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "imagens": [
+        {
+          "grande": "http://localhost:3300/images/chineloMedio.png",
+          "medio": "http://localhost:3300/images/chineloMedio.png",
+          "pequeno": "http://localhost:3300/images/chineloPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/rasteiraGrande.png",
+          "medio": "http://localhost:3300/images/rasteiraMedio.png",
+          "pequeno": "http://localhost:3300/images/rasteiraPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/bolsaMedio.png",
+          "medio": "http://localhost:3300/images/bolsaMedio.png",
+          "pequeno": "http://localhost:3300/images/bolsaPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/carteiraMedio.png",
+          "medio": "http://localhost:3300/images/carteiraMedio.png",
+          "pequeno": "http://localhost:3300/images/carteiraPequeno.png"
+        }
+      ],
+      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png"
+    },
+    {
+      "nome": "Rasteira",
+      "codigo": "RT 0568 | 03.07.0653",
+      "precoOriginal": 69.00,
+      "precoAtual": 55.20,
+      "cores": [],
+      "tamanhos": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "imagens": [
+        {
+          "grande": "http://localhost:3300/images/rasteiraGrande.png",
+          "medio": "http://localhost:3300/images/rasteiraMedio.png",
+          "pequeno": "http://localhost:3300/images/rasteiraPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/bolsaMedio.png",
+          "medio": "http://localhost:3300/images/bolsaMedio.png",
+          "pequeno": "http://localhost:3300/images/bolsaPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/chineloMedio.png",
+          "medio": "http://localhost:3300/images/chineloMedio.png",
+          "pequeno": "http://localhost:3300/images/chineloPequeno.png"
+        },
+        {
+          "grande": "http://localhost:3300/images/carteiraMedio.png",
+          "medio": "http://localhost:3300/images/carteiraMedio.png",
+          "pequeno": "http://localhost:3300/images/carteiraPequeno.png"
+        }
+      ],
+      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png"
     }
   ]
-}
