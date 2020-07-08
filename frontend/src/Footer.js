@@ -50,16 +50,16 @@ class Footer extends React.Component{
                             onBlur={(e) => this.handleFocus('classEmail',e)}
                         />
                     </label>
-                    <button>Enviar</button>
+                    <button className="botaoPequeno">Enviar</button>
                 </div>
                 </div>
                 <div className="Footer">
                     <div className="mainFooterSection">
                         <div className="container">
                             <div className="redesSociais">
-                                <img src={facebook} alt="facebook" className="logoRede"/>
-                                <img src={instagram} alt="instagram" className="logoRede"/>
-                                <img src={pinterest} alt="pinterest" className="logoRede"/>
+                                <img src={facebook} alt="facebook" className="logoRede clicavel"/>
+                                <img src={instagram} alt="instagram" className="logoRede clicavel"/>
+                                <img src={pinterest} alt="pinterest" className="logoRede clicavel"/>
                             </div>
                             <div className="mainFooter">
                                 <div className="premios">
@@ -70,32 +70,32 @@ class Footer extends React.Component{
                                     <div className="footerNav">
                                         <div className="titulo">Institucional</div>
                                         <ul className="footerList">
-                                            <li>A Marca</li>
-                                            <li>Lojas</li>
-                                            <li>Contato</li>
+                                            <li className="clicavel">A Marca</li>
+                                            <li className="clicavel">Lojas</li>
+                                            <li className="clicavel">Contato</li>
                                         </ul>
                                     </div>
                                     <div className="footerNav">
                                         <div className="titulo">Informações</div>
                                         <ul className="footerList">
-                                            <li>Formas de Pagamento</li>
-                                            <li>Trocas e Devoluções</li>
-                                            <li>Cuidados Com o Produto</li>
+                                            <li className="clicavel">Formas de Pagamento</li>
+                                            <li className="clicavel">Trocas e Devoluções</li>
+                                            <li className="clicavel">Cuidados Com o Produto</li>
                                         </ul>
                                     </div>
                                     <div className="footerNav">
                                         <div className="titulo">Conheça</div>
                                         <ul>
-                                            <li>Franquias e Multimarcas</li>
-                                            <li>Trabalhe com Gente</li>
-                                            <li>Procon-RJ</li>
+                                            <li className="clicavel">Franquias e Multimarcas</li>
+                                            <li className="clicavel">Trabalhe com Gente</li>
+                                            <li className="clicavel">Procon-RJ</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="rodapeSection bgPrimaryColor">
+                    <div className="rodapeSection">
                         <div className="container">
                             <div className="rodape">
                                 <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie massa in nunc condimentum, vel placerat lacus pulvinar. Suspendisse vel nisl eu tortor feugiat tempus vel in tortor. Nunc semper leo nec tellus gravida faucibus.</span>

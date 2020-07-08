@@ -34,16 +34,16 @@ class Header extends React.Component{
                     <div className="container">
                         <div className="navbar">
                             <div className="login">
-                                <a href={'#'}>Entrar</a>
+                                <span className="clicavel">Entrar</span>
                                 <span className="separador">|</span>
-                                <a href={'#'}>Cadastre-se</a>
+                                <span className="clicavel">Cadastre-se</span>
                             </div>
                             <div className="menu">
                                 <ul>
-                                    <li><a href="#">Sapatos</a></li>
-                                    <li><a href="#">Bolsas</a></li>
-                                    <li><a href="#">Acessórios</a></li>
-                                    <li><a href="#">OFF</a></li>
+                                    <li><span className="clicavel">Sapatos</span></li>
+                                    <li><span className="clicavel">Bolsas</span></li>
+                                    <li><span className="clicavel">Acessórios</span></li>
+                                    <li><span className="clicavel">OFF</span></li>
                                 </ul>
                             </div>
                             <div className="buscaCarrinho">
@@ -51,7 +51,7 @@ class Header extends React.Component{
                                     <img src={lupa} alt="lupa"/>
                                     <input placeholder="Busca"/>
                                 </label>
-                                <div className="carrinho" onClick={() => this.abrirModal()}>
+                                <div className="carrinho clicavel" onClick={() => this.abrirModal()}>
                                     <img src={carrinho} alt="sacola"/>
                                     0
                                 </div>

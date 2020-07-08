@@ -1,4 +1,4 @@
-@import "cores";
+@import "variaveis";
 
 .ReactModalPortal {
   .carrinhoModal {
@@ -21,9 +21,6 @@
       .fechar{
         path{
           fill: $c-azulCinza
-        }
-        &:hover{
-          cursor: pointer;
         }
       }
     }
@@ -89,9 +86,6 @@
             font-weight: bold;
             padding-left: 13px;
             padding-right: 13px;
-            &:hover{
-              cursor: pointer;
-            }
           }
         }
         .remover{
@@ -99,9 +93,6 @@
           height: auto;
           path{
             fill: $c-cinza3;
-          }
-          &:hover{
-            cursor: pointer;
           }
         }
       }

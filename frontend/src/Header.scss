@@ -1,4 +1,4 @@
-@import "cores";
+@import "variaveis";
 
 .Logo{
   text-align: center;
@@ -11,7 +11,7 @@
     color: $c-cinza6;
     align-items: center;
     justify-content: space-between;
-    a{
+    .clicavel{
       text-decoration: none;
       color: $c-cinza6;
       &:hover{

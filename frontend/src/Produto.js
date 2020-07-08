@@ -83,7 +83,7 @@ class Produto extends React.Component{
         return this.state.produto.cores.map((cor, i) =>{
             return (
                 <div
-                    className={`divCor ${(this.state.corSelecionada === i) ? 'ativo' : ''}`}
+                    className={`divCor clicavel ${(this.state.corSelecionada === i) ? 'ativo' : ''}`}
                     style={{backgroundColor: cor.codigo}}
                     onClick={() => this.selecionarCor(i)}
                     key={i}
@@ -96,7 +96,7 @@ class Produto extends React.Component{
         return this.state.produto.tamanhos.map((tamanho, i) =>{
             return (
                 <div
-                    className={`divTamanho ${(this.state.tamanhoSelecionado === i) ? 'ativo' : ''}`}
+                    className={`divTamanho clicavel ${(this.state.tamanhoSelecionado === i) ? 'ativo' : ''}`}
                     onClick={() => this.selecionarTamanho(i)}
                     key={i}
                 >{tamanho}</div>
@@ -109,7 +109,7 @@ class Produto extends React.Component{
             return (
                 <img
                     src={imagem.miniatura}
-                    className={`imagemCarrossel ${(this.state.imagemSelecionada === i) ? 'ativo' : ''}`}
+                    className={`imagemCarrossel clicavel ${(this.state.imagemSelecionada === i) ? 'ativo' : ''}`}
                     onClick={() => this.selecionarImagem(i)}
                     key={i}
                  />
@@ -137,7 +137,7 @@ class Produto extends React.Component{
                 <div className="Produto">
                     <div className="carrosselContainer">
                         <div className="fotosVideo">
-                            <div className="video">
+                            <div className="video clicavel">
                                 <p>Vídeo</p>
                                 <div className="videoButtonContainer">
                                     <img src={Play} className="play" />
@@ -145,11 +145,11 @@ class Produto extends React.Component{
                                 </div>
                             </div>
                             <div className="carrossel">
-                                <img src={Cima} className="controleCarrossel" onClick={() => this.controleCarrossel(-1)}/>
+                                <img src={Cima} className="controleCarrossel clicavel" onClick={() => this.controleCarrossel(-1)}/>
                                 <div className="imagens">
                                     {carrossel}
                                 </div>
-                                <img src={Baixo} className="controleCarrossel" onClick={() => this.controleCarrossel(1)}/>
+                                <img src={Baixo} className="controleCarrossel clicavel" onClick={() => this.controleCarrossel(1)}/>
                             </div>
                         </div>
                         <div className="imagem">
@@ -174,7 +174,7 @@ class Produto extends React.Component{
                         <div className="tamanho">
                             Tamanho:
                             <span className="selecaoAtual"> ({this.state.produto.tamanhos[this.state.tamanhoSelecionado]})</span>
-                            <span className="guia">Guia de medidas</span>
+                            <span className="guia clicavel">Guia de medidas</span>
                             <div className="tamanhosDisponiveis">
                                 {tamanhos}
                             </div>

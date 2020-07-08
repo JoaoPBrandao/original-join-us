@@ -21,7 +21,7 @@ class Carrinho extends React.Component {
             appElement={document.getElementById('root')}
         >
             <div className="controle">
-                <Fechar className="fechar" onClick={this.props.fecharModal}/>
+                <Fechar className="fechar clicavel" onClick={this.props.fecharModal}/>
             </div>
             <div className="headerModal">
                 <span className="titulo">Sacola</span>
@@ -35,11 +35,11 @@ class Carrinho extends React.Component {
                         <span className="preco">R$ 49,90</span>
                     </div>
                     <div className="quantidade">
-                        <span className="controleQuantidade">-</span>
+                        <span className="controleQuantidade clicavel">-</span>
                         01
-                        <span className="controleQuantidade">+</span>
+                        <span className="controleQuantidade clicavel">+</span>
                     </div>
-                    <Fechar className="remover"/>
+                    <Fechar className="remover clicavel"/>
                 </div>
                 <div className="produto">
                     <img src={Rasteira}/>
@@ -48,11 +48,11 @@ class Carrinho extends React.Component {
                         <span className="preco">R$ 49,90</span>
                     </div>
                     <div className="quantidade">
-                        <span className="controleQuantidade">-</span>
+                        <span className="controleQuantidade clicavel">-</span>
                         01
-                        <span className="controleQuantidade">+</span>
+                        <span className="controleQuantidade clicavel">+</span>
                     </div>
-                    <Fechar className="remover"/>
+                    <Fechar className="remover clicavel"/>
                 </div>
                 <div className="produto">
                     <img src={Rasteira}/>
@@ -61,11 +61,11 @@ class Carrinho extends React.Component {
                         <span className="preco">R$ 49,90</span>
                     </div>
                     <div className="quantidade">
-                        <span className="controleQuantidade">-</span>
+                        <span className="controleQuantidade clicavel">-</span>
                         01
-                        <span className="controleQuantidade">+</span>
+                        <span className="controleQuantidade clicavel">+</span>
                     </div>
-                    <Fechar className="remover"/>
+                    <Fechar className="remover clicavel"/>
                 </div>
                 <div className="produto">
                     <img src={Rasteira}/>
@@ -74,11 +74,11 @@ class Carrinho extends React.Component {
                         <span className="preco">R$ 49,90</span>
                     </div>
                     <div className="quantidade">
-                        <span className="controleQuantidade">-</span>
+                        <span className="controleQuantidade clicavel">-</span>
                         01
-                        <span className="controleQuantidade">+</span>
+                        <span className="controleQuantidade clicavel">+</span>
                     </div>
-                    <Fechar className="remover"/>
+                    <Fechar className="remover clicavel"/>
                 </div>
                 <div className="produto">
                     <img src={Rasteira}/>
@@ -87,50 +87,11 @@ class Carrinho extends React.Component {
                         <span className="preco">R$ 49,90</span>
                     </div>
                     <div className="quantidade">
-                        <span className="controleQuantidade">-</span>
+                        <span className="controleQuantidade clicavel">-</span>
                         01
-                        <span className="controleQuantidade">+</span>
+                        <span className="controleQuantidade clicavel">+</span>
                     </div>
-                    <Fechar className="remover"/>
-                </div>
-                <div className="produto">
-                    <img src={Rasteira}/>
-                    <div className="informacoes">
-                        <span className="nome">Rasteira Tira Dedo</span>
-                        <span className="preco">R$ 49,90</span>
-                    </div>
-                    <div className="quantidade">
-                        <span className="controleQuantidade">-</span>
-                        01
-                        <span className="controleQuantidade">+</span>
-                    </div>
-                    <Fechar className="remover"/>
-                </div>
-                <div className="produto">
-                    <img src={Rasteira}/>
-                    <div className="informacoes">
-                        <span className="nome">Rasteira Tira Dedo</span>
-                        <span className="preco">R$ 49,90</span>
-                    </div>
-                    <div className="quantidade">
-                        <span className="controleQuantidade">-</span>
-                        01
-                        <span className="controleQuantidade">+</span>
-                    </div>
-                    <Fechar className="remover"/>
-                </div>
-                <div className="produto">
-                    <img src={Rasteira}/>
-                    <div className="informacoes">
-                        <span className="nome">Rasteira Tira Dedo</span>
-                        <span className="preco">R$ 49,90</span>
-                    </div>
-                    <div className="quantidade">
-                        <span className="controleQuantidade">-</span>
-                        01
-                        <span className="controleQuantidade">+</span>
-                    </div>
-                    <Fechar className="remover"/>
+                    <Fechar className="remover clicavel"/>
                 </div>
             </div>
             <div className="footerModal">
