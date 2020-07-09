@@ -1,6 +1,10 @@
 @import "variaveis";
 
 .Card{
+  img{
+    width: 100%;
+    height: auto;
+  }
   .valor{
     float: left;
     font-size: $f-16;

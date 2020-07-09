@@ -25,24 +25,52 @@ class Outros extends React.Component{
             exibidos: [],
             paginas: 0,
             paginaAtual: 1,
-            carregando: true
+            carregando: true,
+            quantidadeExibida: 4
         };
+        this.atualizarQuantidade = this.atualizarQuantidade.bind(this);
     }
+    atualizarQuantidade(){
+        let largura = window.outerWidth;
+        if (largura <= 400){
+            this.setState({quantidadeExibida: 1});
+        } else if (largura <= 950){
+            this.setState({quantidadeExibida: 2});
+        } else if (largura <= 1250){
+            this.setState({quantidadeExibida: 3});
+        } else {
+            this.setState({quantidadeExibida: 4});
+        }
+        this.calcularPropriedades();
+    }
+
+    calcularPropriedades(){
+        let tamanho = this.state.produtos.length;
+        let quantidade = this.state.quantidadeExibida;
+        let fim = tamanho;
+        let exibidos;
+        let inicio = 0;
+        let paginaAtual = 1;
+        let paginas = Math.ceil(tamanho/quantidade);
+        if (fim >= quantidade) {
+            fim = quantidade;
+        }
+        exibidos = this.gerarLista(inicio, fim);
+        this.setState({exibidos, tamanho, paginas, fim, inicio, paginaAtual});
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("resize");
+    }
+
     componentDidMount() {
-        let produtos;
+        this.atualizarQuantidade();
+        window.addEventListener("resize", this.atualizarQuantidade);
         axios.get('http://localhost:3300/produto/todos')
             .then(resultado =>{
-                produtos = resultado.data;
-                this.setState({produtos});
-                let tamanho = produtos.length;
-                let fim = tamanho;
-                let exibidos;
-                let paginas = Math.ceil(tamanho/4);
-                if (fim >= 4) {
-                    fim = 4;
-                }
-                exibidos = this.gerarLista(0, fim);
-                this.setState({exibidos, tamanho, paginas, fim, carregando: false});
+                let produtos = resultado.data;
+                this.setState({produtos, carregando: false});
+                this.calcularPropriedades();
             }).catch(erro =>{
                 console.log(erro)
         });
@@ -55,15 +83,15 @@ class Outros extends React.Component{
         return resultado;
     }
     moverCarrosselDireita(){
-        let {inicio, fim, paginaAtual, tamanho} = this.state;
+        let {inicio, fim, paginaAtual, tamanho, quantidadeExibida} = this.state;
         let exibidos;
         let resto;
         if(fim === tamanho){
             return
         }
         paginaAtual += 1;
-        inicio += 4;
-        fim += 4;
+        inicio += quantidadeExibida;
+        fim += quantidadeExibida;
         resto = tamanho-fim;
         if (resto < 0){
             inicio += resto;
@@ -73,22 +101,22 @@ class Outros extends React.Component{
         this.setState({exibidos, inicio, fim, paginaAtual});
     }
     moverCarrosselEsquerda(){
-        let {inicio, fim, paginaAtual} = this.state;
+        let {inicio, fim, paginaAtual, quantidadeExibida} = this.state;
         let exibidos;
         if(inicio === 0){
             return
         }
         paginaAtual -= 1;
-        if(fim % 4 !== 0){
-            inicio -= fim%4;
-            fim -= fim%4
+        if(fim % quantidadeExibida !== 0){
+            inicio -= fim%quantidadeExibida;
+            fim -= fim%quantidadeExibida
         }else{
-            inicio -= 4;
-            fim -= 4;
+            inicio -= quantidadeExibida;
+            fim -= quantidadeExibida;
         }
         if (inicio < 0){
             inicio = 0;
-            fim = 4;
+            fim = quantidadeExibida;
         }
         exibidos = this.gerarLista(inicio, fim);
         this.setState({exibidos, inicio, fim, paginaAtual});
