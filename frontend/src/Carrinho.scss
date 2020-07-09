@@ -150,6 +150,14 @@
       }
     }
   }
+  @media screen and (max-width: 800px) {
+    .carrinhoModal {
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
   @media screen and (min-width: 1600px) {
     .carrinhoModal {
       left: 0;
