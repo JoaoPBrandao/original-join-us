@@ -367,4 +367,47 @@
       }
     }
   }
+  .ReactModalPortal{
+    .caixaModal{
+      position: relative;
+      max-width: 320px;
+      width: 80%;
+      text-align: center;
+      box-sizing: border-box;
+      background-color: $c-branco;
+      padding: 20px 40px 10px 40px;
+      .controle{
+        position: absolute;
+        padding: 0;
+        right: 20px;
+        top: 10px;
+      }
+      .conteudo {
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        .titulo{
+          order: 1;
+          font-size: $f-16;
+          width: 100%;
+          margin-top: 0;
+        }
+        img {
+          order: 2;
+          width: 100%;
+          height: auto;
+
+        }
+        .botaoGrande{
+          margin-top: 10px;
+          order: 3;
+        }
+        .continuar{
+          order: 4;
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+  }
 }

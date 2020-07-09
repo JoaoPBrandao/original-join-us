@@ -67,8 +67,8 @@ class Header extends React.Component{
                                     <input placeholder="Busca" className={`${this.state.buscaAberta ? 'aberto' : ''}`}/>
                                 </label>
                                 <div className="carrinho clicavel" onClick={() => this.abrirModal()}>
-                                    <img src={carrinho} alt="sacola"/>
-                                    <img src={carrinhoMobile}  alt="sacola"/>
+                                    <img src={carrinho} alt="sacola" className="iconeDesktop"/>
+                                    <img src={carrinhoMobile}  alt="sacola" className="iconeMobile"/>
                                     {this.props.quantidade}
                                 </div>
                                 <Carrinho
