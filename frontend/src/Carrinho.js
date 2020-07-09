@@ -1,3 +1,8 @@
+/*
+Componente do carrinho de compras. Ao ser carregado resgata as informações do carrinho do backend e salva no estado do
+redux para ser gerenciado pelo resto da sessão. Sempre que uma modificação no carrinha é feita o novo carrinho é enviado
+para o backend para ser salvo, essa ação é executada pelo reduz
+ */
 import React from 'react';
 import {ReactComponent as Fechar} from "./images/X.svg";
 import Modal from "react-modal";

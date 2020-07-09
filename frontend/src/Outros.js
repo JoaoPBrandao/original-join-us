@@ -1,6 +1,6 @@
 /*
-Pratileira de produtos relacionados, Cards da pratileira foram transformados em um componente próprio para facilitar a
-legibilidade do código.
+Pratileira de produtos relacionados, calcula a quantidade de cards que devem ser exibidos a partir da largura atual da tela.
+Os produtos são resgatados do backend.
  */
 import React from 'react';
 import {ReactComponent as Esquerda} from './images/esquerda.svg';
@@ -26,6 +26,11 @@ class Outros extends React.Component{
         };
         this.atualizarQuantidade = this.atualizarQuantidade.bind(this);
     }
+
+    /*
+    Calcular a quantidade de produtos que sera exibida com a resolução atual essa função é chamada sempre que o
+    tamanho da tela é alterado
+    */
     atualizarQuantidade(){
         let largura = window.outerWidth;
         if (largura <= 400){
@@ -40,6 +45,7 @@ class Outros extends React.Component{
         this.calcularPropriedades();
     }
 
+    //Calcula os dados iniciais necessários para o correto funcionamento do carrossel
     calcularPropriedades(){
         let tamanho = this.state.produtos.length;
         let quantidade = this.state.quantidadeExibida;
@@ -71,6 +77,8 @@ class Outros extends React.Component{
                 console.log(erro)
         });
     }
+
+    //Gera a lista de Cards a serem exibidos atualmente
     gerarLista(inicio, fim){
         let resultado =[];
         for (let i = inicio; i < fim; i++){

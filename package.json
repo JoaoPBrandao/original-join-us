@@ -1,0 +1,12 @@
+{
+  "name": "testeOriginal",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "concurrently": "^5.2.0"
+  },
+  "scripts": {
+    "install": "concurrently \"cd backend & npm i\" \"cd frontend & npm i\"",
+    "start": "concurrently \"cd backend & npm start\" \"cd frontend & npm start\""
+  }
+}
