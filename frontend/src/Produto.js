@@ -5,13 +5,17 @@ Verifica a existência de desconto, cores e tamanhos para para realizar a render
 
 import React from 'react';
 import './Produto.scss';
-import RasteiraVideo from './images/rasteiraVideo.png'
 import Play from './images/play.svg'
 import Cima from './images/cima.svg'
 import Baixo from './images/baixo.svg'
 import Modal from 'react-modal'
 import {ReactComponent as Fechar} from './images/X.svg';
 import axios from 'axios';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { adicionarProduto } from './actions';
+import { formatarNumero } from "./scripts";
+
 
 class Produto extends React.Component{
     constructor(props) {
@@ -50,12 +54,10 @@ class Produto extends React.Component{
     }
 
     abrirModal () {
-        document.body.style.overflow = 'hidden';
         this.setState({ mostrarModal: true });
     }
 
     fecharModal () {
-        document.body.style.overflow = 'unset';
         this.setState({ mostrarModal: false });
     }
 
@@ -109,18 +111,24 @@ class Produto extends React.Component{
         this.selecionarImagem(selecionado)
     }
 
+    adicionar(){
+        let produto = {
+            foto : this.state.produto.imagens[0].pequeno,
+            nome: this.state.produto.nome,
+            valor: this.state.produto.precoAtual,
+            quantidade: 1,
+            id: this.props.id
+        };
+        this.props.adicionarProduto(produto);
+        this.abrirModal();
+    }
+
     componentDidMount() {
         axios.get(`http://localhost:3300/produto/${this.props.id}`)
             .then(resposta => {
                 let produto = resposta.data;
                 produto.desconto = produto.precoAtual < produto.precoOriginal;
                 produto.parcelas = (produto.precoAtual/6);
-                produto.precoAtual = produto.precoAtual.toFixed(2);
-                produto.precoOriginal = produto.precoOriginal.toFixed(2);
-                produto.parcelas = produto.parcelas.toFixed(2);
-                produto.precoAtual = produto.precoAtual.replace('.',',');
-                produto.precoOriginal = produto.precoOriginal.replace('.',',');
-                produto.parcelas = produto.parcelas.replace('.',',');
                 this.setState({produto, carregando: false})
             }).catch(err => {
                 this.setState({erro: true, carregando: false});
@@ -151,7 +159,7 @@ class Produto extends React.Component{
         let desconto;
         //Verifica a existencia de desconto para gerar a div correspondente
         if (this.state.produto.desconto) {
-            desconto = <span className="precoDesconto">R$ {this.state.produto.precoOriginal}</span>
+            desconto = <span className="precoDesconto">R$ {formatarNumero(this.state.produto.precoOriginal)}</span>
         }
         //Verifica a existencia de opções de cores para gerar a div correspondente
         if (this.state.produto.cores.length>0){
@@ -209,12 +217,12 @@ class Produto extends React.Component{
                     <span className="codigo">{this.state.produto.codigo}</span>
                     <div className="preco">
                         {desconto}
-                        <span className="precoAtual">R$ {this.state.produto.precoAtual}</span>
-                        <span className="parcelas"> Ou 6x de R$ {this.state.produto.parcelas}</span>
+                        <span className="precoAtual">R$ {formatarNumero(this.state.produto.precoAtual)}</span>
+                        <span className="parcelas"> Ou 6x de R$ {formatarNumero(this.state.produto.parcelas)}</span>
                     </div>
                     {cores}
                     {tamanhos}
-                    <button className="botaoGrande" onClick={() => this.abrirModal()}> Adicionar à Sacola</button>
+                    <button className="botaoGrande" onClick={() => this.adicionar()}> Adicionar à Sacola</button>
                     <p className="descricaoProduto">
                         Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.
                     </p>
@@ -243,4 +251,6 @@ class Produto extends React.Component{
     }
 }
 
-export default Produto;
+const mapDispatchToProps = dispatch => bindActionCreators({adicionarProduto}, dispatch);
+
+export default connect(null, mapDispatchToProps) (Produto);

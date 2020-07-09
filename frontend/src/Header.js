@@ -4,6 +4,7 @@ import lupa from './images/lupa.svg';
 import carrinho from './images/carrinho.svg';
 import './Header.scss';
 import Carrinho from './Carrinho';
+import { connect } from 'react-redux';
 
 class Header extends React.Component{
 
@@ -15,12 +16,10 @@ class Header extends React.Component{
     }
 
     abrirModal () {
-        document.body.style.overflow = 'hidden';
         this.setState({ mostrarModal: true });
     }
 
     fecharModal () {
-        document.body.style.overflow = 'unset';
         this.setState({ mostrarModal: false });
     }
 
@@ -53,7 +52,7 @@ class Header extends React.Component{
                                 </label>
                                 <div className="carrinho clicavel" onClick={() => this.abrirModal()}>
                                     <img src={carrinho} alt="sacola"/>
-                                    0
+                                    {this.props.quantidade}
                                 </div>
                                 <Carrinho
                                     mostrarModal={this.state.mostrarModal}
@@ -68,4 +67,8 @@ class Header extends React.Component{
     }
 }
 
-export default Header;
+const mapStateToProps = store => ({
+    quantidade: store.carrinhoState.quantidade
+});
+
+export default connect(mapStateToProps) (Header);
