@@ -1,4 +1,15 @@
 @import "variaveis";
 
 section{
+  .Outros{
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  section{
+    .Outros{
+      margin-top: 0;
+    }
+  }
 }

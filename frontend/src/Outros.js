@@ -8,10 +8,6 @@ import {ReactComponent as Direita} from './images/direita.svg';
 import './Outros.scss';
 import Card from './Card.js';
 import axios from 'axios';
-import Bolsa from './images/bolsa.png';
-import Rasteira from './images/rasteiraOutros.png';
-import Chinelo from './images/chinelo.png';
-import Carteira from './images/carteira.png';
 
 class Outros extends React.Component{
 
