@@ -61,6 +61,7 @@
           height: 59px;
         }
         .informacoes{
+          width: 35%;
           .nome{
             display: block;
             color: $c-cinza7;
@@ -156,6 +157,53 @@
       right: 0;
       width: 100%;
       max-width: 100%;
+      .bodyModal{
+        margin-top: 10px;
+        margin-left: 12px;
+        margin-bottom: 0;
+        margin-right: 12px;
+        .produto{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-left: 10px;
+          padding-right: 30px;
+          margin-bottom: 15px;
+          img{
+            width: 20%;
+            height: auto;
+          }
+          .informacoes{
+            width: 30%;
+          }
+        }
+      }
+      .footerModal{
+        .freteGratis{
+          .destaque{
+            display: block;
+            font-weight: normal;
+          }
+        }
+        .finalizar{
+          background-color: $c-cinza2;
+          display: flex;
+          padding: 11px 17px 5px 11px;
+          .valor{
+            width: 45%;
+            color: $c-cinza6;
+            .parcelas{
+              white-space: unset;
+            }
+          }
+          .botaoGrande{
+            width: 45%;
+            display: inline;
+            height: 42px;
+            font-size: $f-12;
+          }
+        }
+      }
     }
   }
   @media screen and (min-width: 1600px) {
