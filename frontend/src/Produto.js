@@ -99,6 +99,18 @@ class Produto extends React.Component{
         });
     }
 
+    gerarSeletor(){
+        return this.state.produto.imagens.map((imagem, i) =>{
+            return (
+                <div
+                    className={`botaoSeletor ${(this.state.imagemSelecionada === i) ? 'ativo' : ''}`}
+                    onClick={() => this.selecionarImagem(i)}
+                    key={i}
+                />
+            )
+        });
+    }
+
     controleCarrossel(movimento){
         let selecionado = this.state.imagemSelecionada;
         selecionado += movimento;
@@ -156,6 +168,8 @@ class Produto extends React.Component{
         let cores;
         let tamanhos;
         let carrossel = this.gerarCarrossel();
+        let seletor = this.gerarSeletor();
+
         let desconto;
         //Verifica a existencia de desconto para gerar a div correspondente
         if (this.state.produto.desconto) {
@@ -209,7 +223,14 @@ class Produto extends React.Component{
                         </div>
                     </div>
                     <div className="imagem">
+                        <div className="titulo">{this.state.produto.nome}</div>
+                        <div className="codigo">{this.state.produto.codigo}</div>
                         <img src={this.state.produto.imagens[this.state.imagemSelecionada].grande} />
+                        <div className="seletor">
+
+                            <img src={Play} className="play" />
+                            {seletor}
+                        </div>
                     </div>
                 </div>
                 <div className="descricao">
@@ -223,8 +244,9 @@ class Produto extends React.Component{
                     {cores}
                     {tamanhos}
                     <button className="botaoGrande" onClick={() => this.adicionar()}> Adicionar à Sacola</button>
+                    <span className="tituloDescricao">Descrição</span>
                     <p className="descricaoProduto">
-                        Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.
+                        {this.state.produto.descricao}
                     </p>
                 </div>
                 <Modal

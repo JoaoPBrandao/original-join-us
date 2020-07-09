@@ -47,14 +47,23 @@
     }
     .imagem{
       margin-left: 56px;
+      .play{
+        display: none;
+      }
       img{
         width: 430px;
         height: 556px;
       }
+      .titulo{
+        display: none;
+      }
+      .codigo{
+        display: none;
+      }
     }
   }
   .descricao{
-    width: 440px;
+    max-width: 440px;
     border: 2px solid #D2E1DF;
     border-radius: 2px;
     display: flex;
@@ -122,13 +131,16 @@
         color: $c-laranja;
         text-decoration: underline;
         float: right;
-        margin-right: 58px;
+        margin-right: 13%;
       }
       .tamanhosDisponiveis{
         display: block;
         margin: 15px 0;
         .divTamanho{
           display: inline;
+          box-sizing: border-box;
+          width: 34px;
+          height: 34px;
           padding: 7px 8px 4px 9px;
           margin-right: 3px;
           border: 1px solid $c-cinza1;
@@ -146,6 +158,9 @@
       margin-top: 53px;
       font-size: $f-18;
       padding: 21px 0px;
+    }
+    .tituloDescricao{
+      display: none;
     }
     .descricaoProduto{
       margin-top: 15px;
@@ -206,6 +221,150 @@
     }
     &:focus{
       outline: none;
+    }
+  }
+}
+@media screen and (max-width: 800px){
+  .Produto{
+    flex-direction: column;
+    align-items: center;
+    .carrosselContainer{
+      .fotosVideo{
+        display: none;
+      }
+      .imagem{
+        margin-left: 0;
+        text-align: center;
+        position: relative;
+        img{
+          margin-top: 10px;
+          width: 90%;
+          height: auto;
+        }
+        .titulo{
+          display: block;
+          color: $c-laranja;
+          font-size: $f-18;
+          line-height: 25px;
+          text-transform: uppercase;
+        }
+        .codigo{
+          display: block;
+          font-size: $f-12;
+          color: $c-cinza5;
+          line-height: 20px;
+        }
+        .seletor{
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          bottom: 3%;
+          left: 20%;
+          right: 20%;
+          .play{
+            width: 20px;
+            height: 20px;
+            display:  inline-block;
+            margin: 0;
+          }
+          .botaoSeletor{
+            display:  inline-block;
+            box-sizing: border-box;
+            width: 9px;
+            height: 9px;
+            border-radius: 100%;
+            border: 1.5px solid $c-branco;
+          }
+          .ativo{
+            border: none;
+            background-color: $c-laranja;
+          }
+        }
+      }
+    }
+    .descricao{
+      padding: 0;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap:wrap;
+      border: none;
+      max-width: 100%;
+      .selecaoAtual{
+        display: none;
+      }
+      .nome{
+        display: none;
+      }
+      .codigo{
+        display: none;
+      }
+      .cor{
+        order: 1;
+        width: 100%;
+      }
+      .tamanho{
+        order: 2;
+        width: 100%;
+        .tamanhosDisponiveis{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          .divTamanho{
+            margin-top: 5px;
+            margin-right: 5px;
+            width: 28px;
+            height: 28px;
+            padding: 4px;
+          }
+        }
+      }
+      .preco {
+        order: 3;
+        display: inline;
+        width: 40%;
+        margin: 0;
+        .precoDesconto {
+          display: block;
+          font-size: $f-12;
+          color: $c-vermelho;
+          text-decoration: line-through;
+          margin-right: 0;
+          &:after {
+            content: "";
+            border-right: none;
+            padding-left: 0;
+          }
+        }
+        .precoAtual{
+          display: block;
+          font-size: $f-16;
+          font-weight: normal;
+        }
+        .parcelas{
+          display: block;
+        }
+      }
+      .botaoGrande{
+        margin: 0;
+        display: inline;
+        width: 55%;
+        order: 4;
+      }
+      .tituloDescricao{
+        order: 5;
+        width: 100%;
+        display: unset;
+        font-size: $f-14;
+        color: $c-laranja;
+        margin-top: 28px;
+      }
+      .descricaoProduto{
+        margin-top: 8px;
+        width: 100%;
+        order: 6;
+      }
     }
   }
 }

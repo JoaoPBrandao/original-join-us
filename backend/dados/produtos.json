@@ -41,22 +41,23 @@
           "pequeno": "http://localhost:3300/images/rasteiraPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/bolsaMedio.png",
+          "grande": "http://localhost:3300/images/bolsaGrande.png",
           "medio": "http://localhost:3300/images/bolsaMedio.png",
           "pequeno": "http://localhost:3300/images/bolsaPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/chineloMedio.png",
+          "grande": "http://localhost:3300/images/chineloGrande.png",
           "medio": "http://localhost:3300/images/chineloMedio.png",
           "pequeno": "http://localhost:3300/images/chineloPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/carteiraMedio.png",
+          "grande": "http://localhost:3300/images/carteiraGrande.png",
           "medio": "http://localhost:3300/images/carteiraMedio.png",
           "pequeno": "http://localhost:3300/images/carteiraPequeno.png"
         }
       ],
-      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png"
+      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png",
+      "descricao": "Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal."
     },
     {
       "nome": "Bolsa",
@@ -84,7 +85,7 @@
       "tamanhos": [],
       "imagens": [
         {
-          "grande": "http://localhost:3300/images/bolsaMedio.png",
+          "grande": "http://localhost:3300/images/bolsaGrande.png",
           "medio": "http://localhost:3300/images/bolsaMedio.png",
           "pequeno": "http://localhost:3300/images/bolsaPequeno.png"
         },
@@ -94,17 +95,18 @@
           "pequeno": "http://localhost:3300/images/rasteiraPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/chineloMedio.png",
+          "grande": "http://localhost:3300/images/chineloGrande.png",
           "medio": "http://localhost:3300/images/chineloMedio.png",
           "pequeno": "http://localhost:3300/images/chineloPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/carteiraMedio.png",
+          "grande": "http://localhost:3300/images/carteiraGrande.png",
           "medio": "http://localhost:3300/images/carteiraMedio.png",
           "pequeno": "http://localhost:3300/images/carteiraPequeno.png"
         }
       ],
-      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png"
+      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png",
+      "descricao": "Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal."
     },
     {
       "nome": "Chinelo",
@@ -143,7 +145,7 @@
       ],
       "imagens": [
         {
-          "grande": "http://localhost:3300/images/chineloMedio.png",
+          "grande": "http://localhost:3300/images/chineloGrande.png",
           "medio": "http://localhost:3300/images/chineloMedio.png",
           "pequeno": "http://localhost:3300/images/chineloPequeno.png"
         },
@@ -153,17 +155,18 @@
           "pequeno": "http://localhost:3300/images/rasteiraPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/bolsaMedio.png",
+          "grande": "http://localhost:3300/images/bolsaGrande.png",
           "medio": "http://localhost:3300/images/bolsaMedio.png",
           "pequeno": "http://localhost:3300/images/bolsaPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/carteiraMedio.png",
+          "grande": "http://localhost:3300/images/carteiraGrande.png",
           "medio": "http://localhost:3300/images/carteiraMedio.png",
           "pequeno": "http://localhost:3300/images/carteiraPequeno.png"
         }
       ],
-      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png"
+      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png",
+      "descricao": "Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal."
     },
     {
       "nome": "Rasteira",
@@ -190,22 +193,23 @@
           "pequeno": "http://localhost:3300/images/rasteiraPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/bolsaMedio.png",
+          "grande": "http://localhost:3300/images/bolsaGrande.png",
           "medio": "http://localhost:3300/images/bolsaMedio.png",
           "pequeno": "http://localhost:3300/images/bolsaPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/chineloMedio.png",
+          "grande": "http://localhost:3300/images/chineloGrande.png",
           "medio": "http://localhost:3300/images/chineloMedio.png",
           "pequeno": "http://localhost:3300/images/chineloPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/carteiraMedio.png",
+          "grande": "http://localhost:3300/images/carteiraGrande.png",
           "medio": "http://localhost:3300/images/carteiraMedio.png",
           "pequeno": "http://localhost:3300/images/carteiraPequeno.png"
         }
       ],
-      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png"
+      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png",
+      "descricao": "Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal."
     },
     {
       "nome": "Carteira",
@@ -229,7 +233,7 @@
       "tamanhos": [],
       "imagens": [
         {
-          "grande": "http://localhost:3300/images/carteiraMedio.png",
+          "grande": "http://localhost:3300/images/carteiraGrande.png",
           "medio": "http://localhost:3300/images/carteiraMedio.png",
           "pequeno": "http://localhost:3300/images/carteiraPequeno.png"
         },
@@ -239,17 +243,18 @@
           "pequeno": "http://localhost:3300/images/rasteiraPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/bolsaMedio.png",
+          "grande": "http://localhost:3300/images/bolsaGrande.png",
           "medio": "http://localhost:3300/images/bolsaMedio.png",
           "pequeno": "http://localhost:3300/images/bolsaPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/chineloMedio.png",
+          "grande": "http://localhost:3300/images/chineloGrande.png",
           "medio": "http://localhost:3300/images/chineloMedio.png",
           "pequeno": "http://localhost:3300/images/chineloPequeno.png"
         }
       ],
-      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png"
+      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png",
+      "descricao": "Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal."
     },
     {
       "nome": "Bolsa",
@@ -277,7 +282,7 @@
       "tamanhos": [],
       "imagens": [
         {
-          "grande": "http://localhost:3300/images/bolsaMedio.png",
+          "grande": "http://localhost:3300/images/bolsaGrande.png",
           "medio": "http://localhost:3300/images/bolsaMedio.png",
           "pequeno": "http://localhost:3300/images/bolsaPequeno.png"
         },
@@ -287,17 +292,18 @@
           "pequeno": "http://localhost:3300/images/rasteiraPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/chineloMedio.png",
+          "grande": "http://localhost:3300/images/chineloGrande.png",
           "medio": "http://localhost:3300/images/chineloMedio.png",
           "pequeno": "http://localhost:3300/images/chineloPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/carteiraMedio.png",
+          "grande": "http://localhost:3300/images/carteiraGrande.png",
           "medio": "http://localhost:3300/images/carteiraMedio.png",
           "pequeno": "http://localhost:3300/images/carteiraPequeno.png"
         }
       ],
-      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png"
+      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png",
+      "descricao": "Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal."
     },
     {
       "nome": "Rasteira",
@@ -324,22 +330,23 @@
           "pequeno": "http://localhost:3300/images/rasteiraPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/bolsaMedio.png",
+          "grande": "http://localhost:3300/images/bolsaGrande.png",
           "medio": "http://localhost:3300/images/bolsaMedio.png",
           "pequeno": "http://localhost:3300/images/bolsaPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/chineloMedio.png",
+          "grande": "http://localhost:3300/images/chineloGrande.png",
           "medio": "http://localhost:3300/images/chineloMedio.png",
           "pequeno": "http://localhost:3300/images/chineloPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/carteiraMedio.png",
+          "grande": "http://localhost:3300/images/carteiraGrande.png",
           "medio": "http://localhost:3300/images/carteiraMedio.png",
           "pequeno": "http://localhost:3300/images/carteiraPequeno.png"
         }
       ],
-      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png"
+      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png",
+      "descricao": "Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal."
     },
     {
       "nome": "Rasteira Tira Dedo",
@@ -383,22 +390,23 @@
           "pequeno": "http://localhost:3300/images/rasteiraPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/bolsaMedio.png",
+          "grande": "http://localhost:3300/images/bolsaGrande.png",
           "medio": "http://localhost:3300/images/bolsaMedio.png",
           "pequeno": "http://localhost:3300/images/bolsaPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/chineloMedio.png",
+          "grande": "http://localhost:3300/images/chineloGrande.png",
           "medio": "http://localhost:3300/images/chineloMedio.png",
           "pequeno": "http://localhost:3300/images/chineloPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/carteiraMedio.png",
+          "grande": "http://localhost:3300/images/carteiraGrande.png",
           "medio": "http://localhost:3300/images/carteiraMedio.png",
           "pequeno": "http://localhost:3300/images/carteiraPequeno.png"
         }
       ],
-      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png"
+      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png",
+      "descricao": "Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal."
     },
     {
       "nome": "Chinelo",
@@ -437,7 +445,7 @@
       ],
       "imagens": [
         {
-          "grande": "http://localhost:3300/images/chineloMedio.png",
+          "grande": "http://localhost:3300/images/chineloGrande.png",
           "medio": "http://localhost:3300/images/chineloMedio.png",
           "pequeno": "http://localhost:3300/images/chineloPequeno.png"
         },
@@ -447,17 +455,18 @@
           "pequeno": "http://localhost:3300/images/rasteiraPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/bolsaMedio.png",
+          "grande": "http://localhost:3300/images/bolsaGrande.png",
           "medio": "http://localhost:3300/images/bolsaMedio.png",
           "pequeno": "http://localhost:3300/images/bolsaPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/carteiraMedio.png",
+          "grande": "http://localhost:3300/images/carteiraGrande.png",
           "medio": "http://localhost:3300/images/carteiraMedio.png",
           "pequeno": "http://localhost:3300/images/carteiraPequeno.png"
         }
       ],
-      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png"
+      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png",
+      "descricao": "Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal."
     },
     {
       "nome": "Rasteira",
@@ -484,21 +493,22 @@
           "pequeno": "http://localhost:3300/images/rasteiraPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/bolsaMedio.png",
+          "grande": "http://localhost:3300/images/bolsaGrande.png",
           "medio": "http://localhost:3300/images/bolsaMedio.png",
           "pequeno": "http://localhost:3300/images/bolsaPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/chineloMedio.png",
+          "grande": "http://localhost:3300/images/chineloGrande.png",
           "medio": "http://localhost:3300/images/chineloMedio.png",
           "pequeno": "http://localhost:3300/images/chineloPequeno.png"
         },
         {
-          "grande": "http://localhost:3300/images/carteiraMedio.png",
+          "grande": "http://localhost:3300/images/carteiraGrande.png",
           "medio": "http://localhost:3300/images/carteiraMedio.png",
           "pequeno": "http://localhost:3300/images/carteiraPequeno.png"
         }
       ],
-      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png"
+      "videoThumb": "http://localhost:3300/images/rasteiraVideo.png",
+      "descricao": "Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal."
     }
   ]
