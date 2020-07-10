@@ -19,6 +19,7 @@
       display: flex;
       justify-content: space-between;
       padding-left: 60px;
+      padding-right: 310px;
       .news{
         border: 2px solid $c-cinza3;
         border-radius: 100%;
@@ -83,7 +84,7 @@
         }
       .premios{
           margin-top: 51px;
-          .logoPremio{
+          .logoPremio:first-child{
             margin-right: 12px;
           }
         }
@@ -94,7 +95,6 @@
         box-sizing: border-box;
         flex-grow: 1;
         justify-content: space-around;
-        margin-right: 20%;
         .footerNav{
           .titulo{
             color: $c-cinzaAzul;
@@ -113,6 +113,10 @@
               font-size: $f-14;
               color: $c-cinza7;
               margin-top: 10px;
+              width: fit-content;
+              &:hover{
+                color: $c-laranja;
+              }
             }
           }
         }
@@ -243,6 +247,7 @@
                 font-size: $f-14;
                 color: $c-cinza7;
                 margin-top: 10px;
+                width: 100%;
               }
             }
             .aberto{

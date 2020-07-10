@@ -46,7 +46,6 @@ class Header extends React.Component{
                         <div className="navbar">
                             <div className="login">
                                 <span className="clicavel">Entrar</span>
-                                <span className="separador">|</span>
                                 <span className="clicavel">Cadastre-se</span>
                             </div>
                             <div className={`menu ${this.state.menuAberto ? 'aberto' : ''}`}>

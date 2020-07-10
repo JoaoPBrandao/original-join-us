@@ -26,7 +26,7 @@ class Footer extends React.Component{
            this.setState(state => ({
                [campo]: true
            }));
-       }else if(e.target.value == ''){
+       }else if(e.target.value === ''){
            this.setState(state => ({
                [campo]: false
            }));

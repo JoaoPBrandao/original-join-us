@@ -15,9 +15,6 @@ import { formatarNumero } from "./scripts";
 
 class Carrinho extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
     componentDidMount() {
         axios.get('http://localhost:3300/carrinho')
             .then(resultado => {
@@ -43,7 +40,7 @@ class Carrinho extends React.Component {
         produtos = produtos.map((produto, i) =>{
             return(
                 <div className="produto" key={i}>
-                    <img src={produto.foto}/>
+                    <img src={produto.foto} alt={`foto do produto ${produto.nome}`}/>
                     <div className="informacoes">
                         <span className="nome">{produto.nome}</span>
                         <span className="preco">R$ {formatarNumero(produto.valor)}</span>

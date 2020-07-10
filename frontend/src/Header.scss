@@ -14,20 +14,23 @@
     color: $c-cinza6;
     align-items: center;
     justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
     .clicavel{
-      text-decoration: none;
       color: $c-cinza6;
       &:hover{
         color: $c-preto;
+        text-decoration: underline;
       }
     }
     .login {
       white-space: nowrap;
       font-size: $f-12;
-      margin-left: 25px;
-      .separador {
-        margin-left: 6px;
-        margin-right: 6px;
+      span:first-child:after{
+          content: '|';
+          display: inline-block;
+          margin-left: 6px;
+          margin-right: 6px;
       }
     }
     .menu {
@@ -50,7 +53,6 @@
     .buscaCarrinho{
       display: flex;
       align-items: center;
-      margin-right: 25px;
       .busca{
         display: flex;
         align-items: center;
@@ -62,6 +64,8 @@
           border-bottom: 1px solid $c-cinza2;
         }
         input{
+          padding-left: 5px;
+          padding-bottom: 3px;
           border: none;
           border-bottom: 1px solid $c-cinza2;
           height: 21px;

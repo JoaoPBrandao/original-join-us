@@ -93,6 +93,7 @@ class Produto extends React.Component{
                     src={imagem.pequeno}
                     className={`imagemCarrossel clicavel ${(this.state.imagemSelecionada === i) ? 'ativo' : ''}`}
                     onClick={() => this.selecionarImagem(i)}
+                    alt={`${i+1}'ª imagem do produto'`}
                     key={i}
                  />
             )
@@ -207,28 +208,28 @@ class Produto extends React.Component{
             <div className="Produto">
                 <div className="carrosselContainer">
                     <div className="fotosVideo">
-                        <div className="video clicavel">
+                        <div className="video">
                             <p>Vídeo</p>
-                            <div className="videoButtonContainer">
-                                <img src={Play} className="play" />
-                                <img src={this.state.produto.videoThumb} className="videoTumb"/>
+                            <div className="videoButtonContainer clicavel">
+                                <img src={Play} className="play" alt="Botão para iniciar vídeo"/>
+                                <img src={this.state.produto.videoThumb} className="videoTumb" alt="miniatura do vídeo"/>
                             </div>
                         </div>
                         <div className="carrossel">
-                            <img src={Cima} className="controleCarrossel clicavel" onClick={() => this.controleCarrossel(-1)}/>
+                            <img src={Cima} className="controleCarrossel clicavel" onClick={() => this.controleCarrossel(-1)} alt="Controlador para voltar imagem do produto"/>
                             <div className="imagens">
                                 {carrossel}
                             </div>
-                            <img src={Baixo} className="controleCarrossel clicavel" onClick={() => this.controleCarrossel(1)}/>
+                            <img src={Baixo} className="controleCarrossel clicavel" onClick={() => this.controleCarrossel(1)} alt="Controlador para avançar imagem do produto"/>
                         </div>
                     </div>
                     <div className="imagem">
                         <div className="titulo">{this.state.produto.nome}</div>
                         <div className="codigo">{this.state.produto.codigo}</div>
-                        <img src={this.state.produto.imagens[this.state.imagemSelecionada].grande} />
+                        <img src={this.state.produto.imagens[this.state.imagemSelecionada].grande} alt ="Imagem do produto selecionada"/>
                         <div className="seletor">
 
-                            <img src={Play} className="play" />
+                            <img src={Play} className="play" alt="Botão para iniciar vídeo"/>
                             {seletor}
                         </div>
                     </div>
@@ -262,10 +263,10 @@ class Produto extends React.Component{
                         <Fechar className="fechar" onClick={() => this.fecharModal()}/>
                     </div>
                     <div className="conteudo">
-                        <img src={this.state.produto.imagens[0].grande} />
+                        <img src={this.state.produto.imagens[0].grande} alt="Imagem do produto adicionado ao carrinho"/>
                         <p className="titulo">Produto Adicionado Com Sucesso!</p>
                         <button className="botaoGrande" onClick={() => this.fecharModal()}>Finalizar Compra</button>
-                        <p className="continuar" onClick={() => this.fecharModal()}>Continuar Comprando</p>
+                        <p className="continuar clicavel" onClick={() => this.fecharModal()}>Continuar Comprando</p>
                     </div>
                 </Modal>
             </div>
