@@ -45,3 +45,5 @@ do front-end.
 
 - Devido ao pequeno tamanho do projeto, decidi não implementar nenhuma solução de lazy-loading
 de imagens.
+
+- Favicon extraído do site da original.io
