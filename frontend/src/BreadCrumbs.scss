@@ -1,0 +1,33 @@
+@import "variaveis";
+
+.BreadCrumbs{
+  padding-left: 20px;
+  color: $c-cinzaAzul;
+  font-size: $f-12;
+  text-transform: capitalize;
+  span:not(:first-of-type){
+    margin-left: 5px;
+  }
+  span:not(:last-of-type){
+    &:hover{
+      color: $c-preto;
+    }
+    &:after{
+      color: $c-cinzaAzul;
+      content: '/';
+      margin-left: 5px;
+    }
+  }
+  span:last-of-type{
+    font-weight: bold;
+    &:hover{
+      cursor: unset;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .BreadCrumbs {
+    display: none;
+  }
+}
