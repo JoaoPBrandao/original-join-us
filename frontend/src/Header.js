@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './images/logo.svg';
 import lupa from './images/lupa.svg';
-import carrinho from './images/carrinho.svg';
+import {ReactComponent as CarrinhoSvg} from './images/carrinho.svg';
 import carrinhoMobile from './images/carrinhoMobile.svg';
 import './Header.scss';
 import Carrinho from './Carrinho';
@@ -66,7 +66,7 @@ class Header extends React.Component{
                                     <input placeholder="Busca" className={`${this.state.buscaAberta ? 'aberto' : ''}`}/>
                                 </label>
                                 <div className="carrinho clicavel" onClick={() => this.abrirModal()}>
-                                    <img src={carrinho} alt="sacola" className="iconeDesktop"/>
+                                    <CarrinhoSvg className="iconeDesktop"/>
                                     <img src={carrinhoMobile}  alt="sacola" className="iconeMobile"/>
                                     {this.props.quantidade}
                                 </div>

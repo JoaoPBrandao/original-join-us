@@ -36,6 +36,7 @@ class Produto extends React.Component{
             tamanhoSelecionado: 0,
             imagemSelecionada: 0,
             mostrarModal: false,
+            mostrarGuiaDeMedidas: false,
             carregando: true,
             erro: false
         };
@@ -53,12 +54,12 @@ class Produto extends React.Component{
         this.setState({imagemSelecionada: imagem});
     }
 
-    abrirModal () {
-        this.setState({ mostrarModal: true });
+    abrirModal (modal) {
+        this.setState({ [modal]: true });
     }
 
     fecharModal () {
-        this.setState({ mostrarModal: false });
+        this.setState({ mostrarModal: false, mostrarGuiaDeMedidas: false });
     }
 
     gerarCores(){
@@ -133,7 +134,7 @@ class Produto extends React.Component{
             id: this.props.id
         };
         this.props.adicionarProduto(produto);
-        this.abrirModal();
+        this.abrirModal('mostrarModal');
     }
 
     componentDidMount() {
@@ -196,7 +197,7 @@ class Produto extends React.Component{
                 <div className="tamanho">
                     Tamanho:
                     <span className="selecaoAtual"> ({this.state.produto.tamanhos[this.state.tamanhoSelecionado]})</span>
-                    <span className="guia clicavel">Guia de medidas</span>
+                    <span className="guia clicavel" onClick={() => this.abrirModal('mostrarGuiaDeMedidas')}>Guia de medidas</span>
                     <div className="tamanhosDisponiveis">
                         {divTamanhos}
                     </div>
@@ -268,6 +269,16 @@ class Produto extends React.Component{
                         <button className="botaoGrande" onClick={() => this.fecharModal()}>Finalizar Compra</button>
                         <p className="continuar clicavel" onClick={() => this.fecharModal()}>Continuar Comprando</p>
                     </div>
+                </Modal>
+                <Modal
+                    isOpen={this.state.mostrarGuiaDeMedidas}
+                    contentLabel="Guia de medidas"
+                    className="caixaModal emConstrucao"
+                    shouldCloseOnOverlayClick={true}
+                    onRequestClose={() => this.fecharModal()}
+                    overlayClassName="overlay"
+                    appElement={document.getElementById('root')}>
+                    <p>Em Construção :)</p>
                 </Modal>
             </div>
         );
