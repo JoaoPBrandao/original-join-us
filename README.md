@@ -1,8 +1,11 @@
+http://ec2-54-237-103-28.compute-1.amazonaws.com/
+
 Executar localmente:
 
 ### `npm i` (instala o concurrently)
 ### `npm run install` (instala dependências do front e back)
 ### `npm run start` (inicia servidores do front e back)
+
 
 # React
 Possuo mais familiaridade com Vue, mas escolhi utilizar o react devido à preferência do teste.

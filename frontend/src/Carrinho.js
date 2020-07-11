@@ -12,11 +12,12 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {adicionarUnidade, removerUnidade, removerProduto, definirInicial} from './actions';
 import { formatarNumero } from "./scripts";
+import config from "./config";
 
 class Carrinho extends React.Component {
 
     componentDidMount() {
-        axios.get('http://localhost:3300/carrinho')
+        axios.get(config.apiHost+'/carrinho')
             .then(resultado => {
                 this.props.definirInicial(resultado.data);
             }).catch(erro => {

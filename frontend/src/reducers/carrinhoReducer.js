@@ -1,11 +1,12 @@
 import axios from 'axios';
+import config from "../config";
 const initialState = {
     produtos: [],
     quantidade: 0
 };
 
 function atualizarCarrinho(produtos){
-    axios.post('http://localhost:3300/carrinho', produtos)
+    axios.post(config.apiHost+'/carrinho', produtos)
         .catch(erro =>{
             console.log(erro);
         })

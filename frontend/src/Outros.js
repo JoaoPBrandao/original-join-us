@@ -8,6 +8,7 @@ import {ReactComponent as Direita} from './images/direita.svg';
 import './Outros.scss';
 import Card from './Card.js';
 import axios from 'axios';
+import config from "./config";
 
 class Outros extends React.Component{
 
@@ -66,9 +67,10 @@ class Outros extends React.Component{
     }
 
     componentDidMount() {
+        console.log(config.apiHost);
         this.atualizarQuantidade();
         window.addEventListener("resize", this.atualizarQuantidade);
-        axios.get('http://localhost:3300/produto/todos')
+        axios.get(config.apiHost+'/produto/todos')
             .then(resultado =>{
                 let produtos = resultado.data;
                 this.setState({produtos, carregando: false});

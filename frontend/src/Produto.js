@@ -15,6 +15,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { adicionarProduto } from './actions';
 import { formatarNumero } from "./scripts";
+import config from "./config";
 
 
 class Produto extends React.Component{
@@ -138,7 +139,7 @@ class Produto extends React.Component{
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:3300/produto/${this.props.id}`)
+        axios.get(config.apiHost+`/produto/${this.props.id}`)
             .then(resposta => {
                 let produto = resposta.data;
                 produto.desconto = produto.precoAtual < produto.precoOriginal;
